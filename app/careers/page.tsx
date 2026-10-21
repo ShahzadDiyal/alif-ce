@@ -1,149 +1,188 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
-  ArrowRight, Award, Briefcase, CheckCircle2, ClipboardCheck, DraftingCompass, HardHat,
-  HeartPulse, Mail, ShieldCheck, TrendingUp,
+  ArrowDown, ArrowRight, BadgeCheck, Building2, GraduationCap, Landmark, ShieldCheck, Sparkles,
 } from "lucide-react";
+import ApplicationForm from "@/components/ApplicationForm";
+import CareersExplorer from "@/components/CareersExplorer";
 import CountUp from "@/components/CountUp";
-import { SITE } from "@/lib/data";
+import { IMAGES } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Careers — Join Pakistan's Most Rigorous Engineering Cadre | ALIF",
+  title: "Careers — Build Your Engineering Legacy | ALIF Engineering & Construction",
   description:
-    "Careers at ALIF Engineering & Construction: site engineering, design & planning, MEP and QA/QC-HSE roles across Lahore, Islamabad and Karachi, with PEC CPD hours and a meritocratic cadre track.",
+    "Open engineering requisitions at ALIF: senior resident engineers, geotechnical, MEP commissioning, project controls and HSE roles, plus the 24-month Management Trainee Engineer (MTE) cadre program.",
   alternates: { canonical: "/careers" },
 };
 
-const AREAS = [
-  { icon: HardHat, title: "Site Engineering & Execution", text: "Civil engineers, site managers and foremen delivering structures, finishes and external works on live projects nationwide." },
-  { icon: DraftingCompass, title: "Design, Planning & QS", text: "Structural and BIM engineers, Primavera planners, estimators and quantity surveyors at our Lahore head office." },
-  { icon: Briefcase, title: "MEP & Commissioning", text: "Mechanical, electrical and plumbing engineers and technicians for installation, testing and commissioning teams." },
-  { icon: ShieldCheck, title: "QA/QC & HSE", text: "Quality inspectors, materials engineers and safety officers holding our zero-harm and ISO standards on every site." },
+const WHY = [
+  { icon: Building2, tag: "Unprecedented Magnitude", title: "Mega-Scale Structural Exposure", text: "Manage 35-storey reinforced post-tensioned superstructures, 40-meter diaphragm walls, and monumental civic infrastructure across Karachi, Lahore, and Islamabad." },
+  { icon: Sparkles, tag: "Industry 4.0 Construction", title: "Algorithmic Project Controls", text: "Deploy integrated Primavera P6 enterprise portfolios, 5D BIM synchronization with Revit, high-definition terrestrial LiDAR surveys, and live automated structural health sensors." },
+  { icon: ShieldCheck, tag: "Zero Compromise Doctrine", title: "Institutional Safety & QA/QC", text: "We run ISO 45001 & ISO 9001 accredited sites. Every engineer possesses unilateral authority to halt operations should safety tolerances or concrete curing metrics deviate." },
+  { icon: GraduationCap, tag: "Lifetime Technical Pedigree", title: "Fellows & Mentorship", text: "Work alongside distinguished Fellows of the Pakistan Engineering Council and international consulting directors, fostering rapid evolution toward PE registration and site mastery." },
 ];
 
-const PERKS = [
-  { icon: Award, title: "PEC Continuing CPD Hours", text: "Structured continuing professional development credited toward your PEC registration renewal." },
-  { icon: TrendingUp, title: "Meritocratic Cadre Track", text: "Promotion on audited project performance — measured in tolerances held and milestones met, not tenure." },
-  { icon: HeartPulse, title: "Full Medical & Life Indemnity", text: "Comprehensive medical cover and life indemnity for every cadre member, from day one." },
-];
-
-const STEPS = [
-  { title: "Send Your CV", text: "Email your CV with your discipline, PEC registration (if applicable) and years of experience to our head office." },
-  { title: "Technical Assessment & Panel", text: "Shortlisted engineers sit a discipline assessment and a panel interview with the Technical Directorate." },
-  { title: "Project Mobilisation", text: "Selected profiles are mobilised to a live project or held on file and contacted the moment a matching position opens." },
+const ROTATIONS = [
+  { n: "01", period: "Months 1–6", title: "Substructure, Piling & Earthwork Geotechnics", text: "Active field immersion in continuous flight auger (CFA) piling, anchor stressing, and ground improvement tests." },
+  { n: "02", period: "Months 7–12", title: "High-Rise Superstructure & Post-Tensioning", text: "Core wall jump-form management, high-volume concrete pumping hydraulics, and PT tendon layout QA/QC." },
+  { n: "03", period: "Months 13–18", title: "MEP Services, Fire Systems & BMS Integration", text: "3D BIM clash detection, HVAC riser installation, and life-safety commission protocols." },
+  { n: "04", period: "Months 19–24", title: "Commercial Controls & Primavera P6 Scheduling", text: "Direct apprenticeship under Corporate Tendering Directors, FIDIC contract administration, and project scheduling." },
 ];
 
 export default function CareersPage() {
   return (
     <>
-      <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] pb-12">
-          <p className="anim-fade-up flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold live-dot" /> Academic Recruitment &amp; Professional Cadre
-          </p>
-          <h1 className="anim-fade-up anim-delay-1 mt-5 max-w-3xl font-display text-5xl leading-[1.05] text-ink">
-            Join Pakistan&apos;s Most Rigorous Engineering Cadre.
-          </h1>
-          <p className="anim-fade-up anim-delay-2 mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">
-            We actively recruit high-achieving civil, structural, geotechnical, and MEP engineers who prioritize
-            uncompromising physics over expedient shortcuts — and give them nationally transformative megastructures,
-            BIM 5D workflows, advanced tensile laboratories, and overseas technical workshops.
-          </p>
-          <div className="anim-fade-up anim-delay-3 mt-8 flex flex-wrap gap-3">
-            <a href={`mailto:${SITE.email}?subject=${encodeURIComponent("Career Application — CV")}`} className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light">
-              <Mail className="h-4 w-4" /> Email Your CV
-            </a>
-            <a href="#disciplines" className="rounded-btn border border-ink/20 px-5 py-3 text-sm font-bold text-ink hover:bg-white">View Disciplines</a>
-          </div>
-          <div className="anim-fade-up anim-delay-4 mt-10 grid grid-cols-2 gap-6 border-t border-line pt-8 lg:grid-cols-4">
-            <div>
-              <p className="font-display text-5xl text-ink"><CountUp value={850} suffix="+" /></p>
-              <p className="mt-1 text-[11px] font-bold tracking-[0.18em] text-gold-dark uppercase">Site Operatives on Flagship Projects</p>
-            </div>
-            <div>
-              <p className="font-display text-5xl text-ink"><CountUp value={4} /></p>
-              <p className="mt-1 text-[11px] font-bold tracking-[0.18em] text-gold-dark uppercase">Discipline Tracks</p>
-            </div>
-            <div>
-              <p className="font-display text-5xl text-ink"><CountUp value={3} /></p>
-              <p className="mt-1 text-[11px] font-bold tracking-[0.18em] text-gold-dark uppercase">Regional Offices — Lahore, Islamabad, Karachi</p>
-            </div>
-            <div>
-              <p className="font-display text-5xl text-ink"><CountUp value={38} suffix="+" /></p>
-              <p className="mt-1 text-[11px] font-bold tracking-[0.18em] text-gold-dark uppercase">Years of Engineering Pedigree</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Disciplines */}
-      <section id="disciplines" className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-          <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Where You Can Work</p>
-          <h2 className="reveal mt-3 font-display text-4xl text-ink">Career Areas</h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {AREAS.map((a, i) => (
-              <div key={a.title} className={`reveal reveal-d${i + 1} lift rounded-card border border-line bg-white p-6`}>
-                <a.icon className="h-6 w-6 text-gold-dark" />
-                <h3 className="mt-4 font-display text-lg leading-snug text-ink">{a.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-muted">{a.text}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Perks */}
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {PERKS.map((p, i) => (
-              <div key={p.title} className={`reveal reveal-d${i + 1} flex gap-4 rounded-card bg-cream p-6`}>
-                <p.icon className="h-6 w-6 shrink-0 text-gold-dark" />
-                <div>
-                  <h3 className="font-display text-lg text-ink">{p.title}</h3>
-                  <p className="mt-1.5 text-[13px] leading-relaxed text-muted">{p.text}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How hiring works + openings */}
+      {/* Dark hero */}
       <section className="bg-pine text-cream">
+        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-12 sm:px-6 lg:px-8">
+          <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+            <div>
+              <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Talent Acquisition &amp; Engineering Cadre</p>
+              <h1 className="anim-fade-up anim-delay-1 mt-5 font-display text-5xl leading-[1.05] text-white">
+                Build Your Engineering Legacy with Pakistan&apos;s Preeminent Contractor.
+              </h1>
+              <p className="anim-fade-up anim-delay-2 mt-5 max-w-2xl text-[15px] leading-relaxed text-mist">
+                We invite licensed civil engineers, geotechnical practitioners, MEP directors, and controls managers who
+                revere structural rigor, algorithmic accuracy, and uncompromised physical science.
+              </p>
+              <div className="anim-fade-up anim-delay-3 mt-7 flex flex-wrap gap-3">
+                <a href="#vacancies" className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light">
+                  Explore Open Vacancies <ArrowDown className="h-4 w-4" />
+                </a>
+                <a href="#mte" className="inline-flex items-center gap-2 rounded-btn border border-white/30 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">
+                  Graduate Cadre Cohort <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
+            <div className="anim-fade-up anim-delay-2 relative hidden overflow-hidden rounded-card lg:block">
+              <Image src={IMAGES.engineer} alt="PEC Registered Chartered Engineers on site" width={900} height={640} priority className="hero-zoom h-72 w-full object-cover" />
+              <span className="absolute bottom-4 left-4 flex items-center gap-2 rounded-md bg-ink/85 px-3 py-2 text-[11.5px] font-bold text-gold-light backdrop-blur">
+                <BadgeCheck className="h-4 w-4" /> PEC Registered Chartered Engineers
+              </span>
+            </div>
+          </div>
+          <div className="anim-fade-up anim-delay-4 mt-11 grid grid-cols-2 gap-6 border-t border-white/10 pt-8 lg:grid-cols-4">
+            <div>
+              <p className="font-display text-5xl text-white"><CountUp value={450} suffix="+" /></p>
+              <p className="mt-1 text-[12px] font-bold text-gold-light">Engineers &amp; Technologists</p>
+              <p className="mt-1 text-[12px] text-mist">Licensed resident, structural, and field specialists nationwide.</p>
+            </div>
+            <div>
+              <p className="font-display text-5xl text-white"><CountUp value={100} suffix="%" /></p>
+              <p className="mt-1 text-[12px] font-bold text-gold-light">PEC CPD Sponsorship</p>
+              <p className="mt-1 text-[12px] text-mist">Continuous professional training and certification fully covered.</p>
+            </div>
+            <div>
+              <p className="font-display text-5xl text-white"><CountUp value={0} decimals={2} /></p>
+              <p className="mt-1 text-[12px] font-bold text-gold-light">Lost-Time Injury (LTI) Rate</p>
+              <p className="mt-1 text-[12px] text-mist">Strict BS 5975 temporary works governance and safety culture.</p>
+            </div>
+            <div>
+              <p className="font-display text-5xl text-white"><CountUp value={30} suffix="+" /></p>
+              <p className="mt-1 text-[12px] font-bold text-gold-light">Mega Superstructures</p>
+              <p className="mt-1 text-[12px] text-mist">Direct assignments on landmark towers and civic facilities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why ALIF */}
+      <section className="bg-paper">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-          <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">How Hiring Works</p>
-          <h2 className="reveal mt-3 font-display text-4xl text-white">Three Steps Into the Cadre</h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
-            {STEPS.map((s, i) => (
-              <div key={s.title} className={`reveal reveal-d${i + 1} rounded-card border border-white/10 bg-pine-deep p-6`}>
-                <p className="font-display text-4xl text-gold">0{i + 1}</p>
-                <h3 className="mt-3 font-display text-lg text-white">{s.title}</h3>
-                <p className="mt-2 text-[13px] leading-relaxed text-mist">{s.text}</p>
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
+            <div className="reveal">
+              <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">The ALIF Standard</p>
+              <h2 className="mt-3 font-display text-4xl leading-tight text-ink">Why Visionary Engineers Entrust Their Careers to ALIF.</h2>
+            </div>
+            <p className="reveal reveal-d2 text-[14.5px] leading-relaxed text-muted lg:justify-self-end lg:max-w-md">
+              We operate at the convergence of heavy structural permanence and high-velocity digital engineering. Here,
+              responsibility is absolute, calculations are audited down to the milliradian, and leadership is grounded in the field.
+            </p>
+          </div>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {WHY.map((w, i) => (
+              <div key={w.title} className={`reveal reveal-d${i + 1} lift rounded-card border border-line bg-white p-6`}>
+                <w.icon className="h-6 w-6 text-gold-dark" />
+                <h3 className="mt-4 font-display text-lg leading-snug text-ink">{w.title}</h3>
+                <p className="mt-2 text-[13px] leading-relaxed text-muted">{w.text}</p>
+                <p className="mt-4 border-t border-line pt-3 text-[11px] font-bold tracking-wider text-gold-dark uppercase">{w.tag}</p>
               </div>
             ))}
           </div>
-          <div className="reveal mt-10 flex flex-col items-start justify-between gap-5 rounded-card bg-gold px-6 py-6 sm:px-8 lg:flex-row lg:items-center">
-            <div>
-              <h3 className="flex items-center gap-2 font-display text-2xl text-ink">
-                <ClipboardCheck className="h-6 w-6" /> Current Openings
-              </h3>
-              <p className="mt-2 max-w-2xl text-[13.5px] leading-relaxed text-ink/75">
-                Specific vacancies are announced as projects mobilise. To be considered for upcoming roles, send your CV
-                with your discipline, PEC registration (if applicable) and years of experience — suitable profiles are
-                kept on file and contacted when a matching position opens.
-              </p>
+        </div>
+      </section>
+
+      {/* Vacancies */}
+      <section id="vacancies" className="bg-cream">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+          <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Active Opportunities</p>
+          <h2 className="reveal mt-3 font-display text-4xl text-ink">Engineering Cadre Requisitions.</h2>
+          <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
+            Open appointments for technical directors, superintendents, and certified specialists across our operational centers.
+          </p>
+          <div className="mt-9">
+            <CareersExplorer />
+          </div>
+          <p className="reveal mt-8 flex items-center gap-2.5 rounded-card border border-line bg-white px-5 py-4 text-[13.5px] text-muted">
+            <Landmark className="h-5 w-5 shrink-0 text-gold-dark" />
+            <span><strong className="text-ink">University Alliances:</strong> Structured annual talent pipelines directly from UET Lahore, NUST Islamabad, and NED Karachi.</span>
+          </p>
+        </div>
+      </section>
+
+      {/* MTE program */}
+      <section id="mte" className="bg-paper">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-16 lg:grid-cols-[1fr_1.3fr]">
+          <div className="reveal relative overflow-hidden rounded-card">
+            <Image src={IMAGES.hero} alt="Management Trainee Engineers on an ALIF site" width={1000} height={900} className="h-full min-h-[320px] w-full object-cover" />
+            <span className="absolute bottom-4 left-4 rounded-md bg-gold px-3 py-1.5 text-[11px] font-bold tracking-wider text-ink uppercase">Young Professional Program</span>
+          </div>
+          <div>
+            <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Young Professional Program</p>
+            <h2 className="reveal mt-3 font-display text-4xl leading-tight text-ink">The ALIF Management Trainee Engineer (MTE) Cadre.</h2>
+            <p className="reveal mt-4 text-[14.5px] leading-relaxed text-muted">
+              An immersive, 24-month rotational fellowship engineered to forge Pakistan&apos;s future project directors.
+              Fresh graduates rotate through Subsurface Geotechnics, Tower Superstructures, Electromechanical Coordination, and Commercial Tendering.
+            </p>
+            <div className="mt-8 space-y-4">
+              {ROTATIONS.map((r, i) => (
+                <div key={r.n} className={`reveal reveal-d${i + 1} flex gap-4 rounded-card border border-line bg-white p-5`}>
+                  <span className="font-display text-3xl text-gold-dark">{r.n}</span>
+                  <div>
+                    <p className="text-[11px] font-bold tracking-wider text-gold-dark uppercase">{r.period}</p>
+                    <h3 className="mt-0.5 font-display text-lg leading-snug text-ink">{r.title}</h3>
+                    <p className="mt-1 text-[13px] leading-relaxed text-muted">{r.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
-            <a href={`mailto:${SITE.email}?subject=${encodeURIComponent("Career Application — CV")}`} className="inline-flex shrink-0 items-center gap-2 rounded-btn bg-ink px-5 py-3 text-sm font-bold text-white hover:bg-pine-deep">
-              Email Your CV <ArrowRight className="h-4 w-4" />
+            <a href="#apply" className="reveal mt-7 inline-flex items-center gap-2 text-[13.5px] font-bold text-gold-dark hover:text-ink">
+              Apply to the 2025 MTE Cohort (Class of 2024–2025 Graduates) <ArrowRight className="h-4 w-4" />
             </a>
           </div>
-          <p className="reveal mt-6 flex flex-wrap gap-x-8 gap-y-2 text-[13px] text-mist">
-            {["PEC Continuing CPD Hours", "Meritocratic Cadre Track", "Full Medical & Life Indemnity"].map((t) => (
-              <span key={t} className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-gold" /> {t}</span>
-            ))}
-          </p>
-          <p className="mt-8 text-[13px] text-mist">
-            Prefer to talk first? Call the head office on{" "}
-            <Link href={SITE.phoneHref} className="font-bold text-gold-light">{SITE.phone}</Link>.
-          </p>
+        </div>
+      </section>
+
+      {/* Application */}
+      <section id="apply" className="bg-cream">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
+          <div className="reveal">
+            <ApplicationForm />
+          </div>
+          <figure className="mx-auto mt-14 max-w-3xl text-center">
+            <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Heritage</p>
+            <blockquote className="reveal mt-4 font-display text-[26px] leading-relaxed text-ink italic">
+              “We do not merely erect buildings. We forge the permanent physical skeleton of Pakistan.”
+            </blockquote>
+            <figcaption className="reveal mt-4 text-[13.5px] leading-relaxed text-muted">
+              If you possess the uncompromising work ethic and structural mastery demanded by projects of national
+              significance, your place is among the ALIF cadre.
+            </figcaption>
+            <Link href="/about" className="reveal mt-6 inline-flex items-center gap-2 text-[13px] font-bold tracking-wide text-gold-dark uppercase hover:text-ink">
+              Meet the Leadership <ArrowRight className="h-4 w-4" />
+            </Link>
+          </figure>
         </div>
       </section>
     </>

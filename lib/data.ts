@@ -625,9 +625,10 @@ export const PROCESS_STEPS = [
 ];
 
 export const OFFICES = [
-  { label: "Lahore Head Office", address: "Alif Tower, Main Boulevard, Gulberg III, Lahore, Pakistan" },
-  { label: "Islamabad Regional Office", address: "Executive Heights, Blue Area, Islamabad, Pakistan" },
-  { label: "Karachi Liaison Office", address: "Ocean Mall Tower, Block 9, Clifton, Karachi, Pakistan" },
+  { label: "Lahore Central", tag: "Principal Headquarters", address: "Alif Tower, Main Boulevard, Gulberg III, Lahore, Punjab", phone: "+92 42 3578 9000", email: "lahore@alifconstruction.pk", person: "Engr. Tariq Masood, PE", role: "Director Pre-Construction" },
+  { label: "Islamabad & KPK", tag: "Federal Directorate", address: "Executive Heights, Sector G-8/4, Blue Area Axis, Islamabad", phone: "+92 51 2890 120", email: "islamabad@alifconstruction.pk", person: "Engr. Salman Shah, M.Eng", role: "Regional VP Federal Tenders" },
+  { label: "Karachi & Sindh", tag: "Maritime & Coastal Division", address: "Ocean View Tower, Block 9, Clifton Coast, Karachi, Sindh", phone: "+92 21 3584 7600", email: "karachi@alifconstruction.pk", person: "Farooq Zubair, MS Structural", role: "Chief Resident Engineer Sindh" },
+  { label: "Plant & Depots", tag: "Logistics & Fleet", address: "Manga Mandi Heavy Base, Lahore \u2022 Port Qasim Depot, Karachi", phone: "+92 42 3591 4410", email: "plant@alifconstruction.pk", person: "Brig. (R) Asim Jahangir", role: "Director Heavy Machinery Fleet" },
 ];
 
 export const SECTOR_PROJECTS: Record<string, string[]> = {
