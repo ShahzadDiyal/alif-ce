@@ -25,6 +25,5 @@ All content lives in `lib/data.ts` — edit sectors, services, projects, stats a
 
 ## Before going live — verify these (they came from the Stitch design mockup)
 
-- Stats are `[XX]` placeholders — replace with real figures.
-- Project values/capacities are `[XX]` placeholders — fill in real, approved numbers only.
+- All counts are real counts of the site portfolio (7 projects: 5 completed, 2 ongoing; 8 sectors; 6 services). Project figures (areas, heights, values) come from the approved Stitch design files — verify them against company records before publishing as fact.
 - Confirm PEC CA No-Limit status, ISO certifications, office addresses, phone/email and the client/testimonial names before publishing them as fact.

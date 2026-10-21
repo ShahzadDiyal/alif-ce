@@ -115,7 +115,7 @@ export default function HomePage() {
             <Link href="/projects" className="btn-outline-light !py-2.5">View All Projects</Link>
           </div>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
+            {PROJECTS.slice(0, 3).map((p) => <ProjectCard key={p.slug} project={p} />)}
           </div>
         </div>
       </section>
@@ -141,7 +141,7 @@ export default function HomePage() {
           <div className="mt-6 grid gap-3 text-[13px] font-semibold text-ink-900 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: BadgeCheck, t: "Pakistan Engineering Council (PEC) No-Limit CA Category" },
-              { icon: ShieldCheck, t: "Over [XX] Million Safe Man-Hours without Lost Time Injury" },
+              { icon: ShieldCheck, t: "1.85M LTI-Free Safe Man-Hours — Alif Horizon Tower" },
               { icon: Leaf, t: "LEED Green Building Standard Adherent" },
               { icon: Award, t: "Recognized by National Contractors Association of Pakistan" },
             ].map((b) => (

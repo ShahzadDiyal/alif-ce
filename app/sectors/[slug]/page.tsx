@@ -72,7 +72,7 @@ export default async function SectorDetail({ params }: { params: Promise<{ slug:
             <Link href="/projects" className="btn-outline-light !py-2.5">All Projects <ArrowRight size={14} /></Link>
           </div>
           <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {PROJECTS.map((p) => <ProjectCard key={p.slug} project={p} />)}
+            {PROJECTS.slice(0, 3).map((p) => <ProjectCard key={p.slug} project={p} />)}
           </div>
         </div>
       </section>

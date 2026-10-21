@@ -17,7 +17,7 @@ const STANDARDS = [
 
 const BADGES = [
   { icon: BadgeCheck, title: "PEC No-Limit CA Category", text: "Pakistan Engineering Council registered constructor in the no-limit category." },
-  { icon: ShieldCheck, title: "[XX] Million Safe Man-Hours", text: "Safe man-hours accumulated without a lost-time injury across active sites." },
+  { icon: ShieldCheck, title: "1.85M LTI-Free Man-Hours", text: "Zero Lost Time Injuries across 850+ site operatives over 3 consecutive years on Alif Horizon Tower." },
   { icon: Leaf, title: "LEED Standard Adherent", text: "Green building standard adherence on applicable commercial projects." },
   { icon: Award, title: "Industry Recognition", text: "Recognized by the National Contractors Association of Pakistan." },
 ];
