@@ -106,7 +106,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* NARRATIVE + SPEC MATRIX */}
       <section className="bg-cream-50">
-        <div className="mx-auto grid w-full gap-10 px-5 py-24 md:px-10 lg:grid-cols-2 lg:px-16">
+        <div className="mx-auto grid w-full gap-10 px-4 py-24 sm:px-6 lg:grid-cols-2 lg:px-12">
           <div>
             <SectionHeading eyebrow="Architectural & Structural Narrative"
               title={cs ? "Engineering a Vertical Benchmark in Central Punjab" : "About This Project"} />
@@ -251,7 +251,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </div>
           </section>
           <section className="bg-cream-100">
-            <div className="mx-auto grid w-full gap-10 px-5 py-24 md:px-10 lg:grid-cols-[1.2fr_.8fr] lg:px-16">
+            <div className="mx-auto grid w-full gap-10 px-4 py-24 sm:px-6 lg:grid-cols-[1.2fr_.8fr] lg:px-12">
               <figure>
                 <Quote size={28} className="text-gold-500" />
                 <blockquote className="mt-4 font-display text-xl italic leading-8 text-pine-800 sm:text-[22px] sm:leading-9">
