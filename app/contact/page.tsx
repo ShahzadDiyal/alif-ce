@@ -31,7 +31,7 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 pt-[136px] pb-16 sm:px-6 lg:px-12">
           <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Headquarters &amp; Regional Offices — Pakistan</p>
           <div className="mt-5 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
             <div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
 
       {/* Offices */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div className="reveal">
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Territorial Deployment</p>
@@ -106,7 +106,7 @@ export default function ContactPage() {
 
       {/* Guidelines + form */}
       <section id="enquiry" className="bg-cream">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-24 lg:grid-cols-[1fr_1.35fr]">
+        <div className="mx-auto grid w-full gap-10 px-4 sm:px-6 lg:px-12 py-24 lg:grid-cols-[1fr_1.35fr]">
           <div className="reveal">
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Formal RFP Protocol</p>
             <h2 className="mt-3 font-display text-4xl leading-tight text-ink">Institutional Tendering Guidelines</h2>
@@ -150,7 +150,7 @@ export default function ContactPage() {
 
       {/* Department desks */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div className="reveal">
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Organizational Directory</p>

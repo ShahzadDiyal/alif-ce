@@ -63,7 +63,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] pb-16">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 pt-[136px] pb-16">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-[12.5px] font-semibold text-muted">
             <Link href="/" className="hover:text-ink">Home</Link>
             <ChevronRight className="h-3.5 w-3.5" />
@@ -111,7 +111,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Lifecycle */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Execution Architecture</p>
           <h2 className="mt-3 font-display text-4xl text-ink">Comprehensive Turnkey Lifecycle</h2>
           <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
@@ -143,7 +143,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Matrices */}
       <section id="matrices" className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Engineering Benchmarks</p>
@@ -170,7 +170,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Milestones */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Executed Monumental Portfolio</p>
@@ -203,7 +203,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Zero-harm */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Institutional Safeguard Standards</p>
@@ -244,7 +244,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Proposal form */}
       <section id="proposal" className="bg-cream">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="text-center">
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Procurement</p>
             <h2 className="mt-3 font-display text-4xl text-ink">Request {service.title} Technical Proposal</h2>
@@ -270,7 +270,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Other services */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 pb-16">
           <h2 className="font-display text-3xl text-ink">Other Engineering Disciplines</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {others.map((s) => <ServiceCard key={s.slug} service={s} />)}

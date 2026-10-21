@@ -56,7 +56,7 @@ export default function AboutPage() {
     <>
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] pb-10">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 pt-[136px] pb-10">
           <p className="flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">
             <span className="h-px w-8 bg-gold" /> Established Heritage &amp; Engineering Distinction
           </p>
@@ -89,7 +89,7 @@ export default function AboutPage() {
 
       {/* Manifesto */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-12 lg:grid-cols-[1.35fr_1fr]">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Our Foundational Manifesto</p>
@@ -162,7 +162,7 @@ export default function AboutPage() {
 
       {/* Leadership */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 text-center">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24 text-center">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Governance &amp; Academic Rigor</p>
           <h2 className="mx-auto mt-3 max-w-2xl font-display text-4xl leading-tight text-ink">Executive Leadership &amp; Technical Directorate</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[14.5px] leading-relaxed text-muted">
@@ -193,7 +193,7 @@ export default function AboutPage() {
 
       {/* Credentials */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 text-center">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24 text-center">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Statutory Clearance &amp; Accreditation</p>
           <h2 className="mt-3 font-display text-4xl text-white">Sanctioned by Apex Regulatory Bodies</h2>
           <p className="mx-auto mt-3 max-w-2xl text-[14.5px] text-mist">
@@ -217,7 +217,7 @@ export default function AboutPage() {
 
       {/* Fleet */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-end">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Mechanized Independence</p>
@@ -262,7 +262,7 @@ export default function AboutPage() {
 
       {/* Careers CTA */}
       <section className="bg-paper pb-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12">
           <div className="rounded-card bg-pine px-6 py-10 text-cream sm:px-10">
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Academic Recruitment &amp; Professional Cadre</p>
             <h2 className="mt-3 max-w-2xl font-display text-3xl leading-tight text-white sm:text-4xl">Join Pakistan&apos;s Most Rigorous Engineering Cadre.</h2>

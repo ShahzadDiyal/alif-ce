@@ -42,7 +42,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
     <>
       {/* HERO — cream, editorial (per design) */}
       <section className="bg-cream-100 pb-12 pt-[136px]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[12.5px] font-semibold text-ink-500">
             <Link href="/projects" className="inline-flex items-center gap-1.5 text-gold-700 hover:text-gold-600">
               <ArrowLeft size={14} /> Back to Projects Portfolio
@@ -106,7 +106,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* NARRATIVE + SPEC MATRIX */}
       <section className="bg-cream-50">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:px-10 lg:grid-cols-2 lg:px-16">
+        <div className="mx-auto grid w-full gap-10 px-5 py-24 md:px-10 lg:grid-cols-2 lg:px-16">
           <div>
             <SectionHeading eyebrow="Architectural & Structural Narrative"
               title={cs ? "Engineering a Vertical Benchmark in Central Punjab" : "About This Project"} />
@@ -158,7 +158,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {/* CHALLENGES — flagship case study */}
       {cs && (
         <section className="bg-cream-200/50">
-          <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+          <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12">
             <SectionHeading eyebrow="Execution Rigor" title="Complex Engineering Challenges & Tailored Solutions" text={cs.challengesIntro} />
             <div className="mt-9 grid gap-6 lg:grid-cols-3">
               {cs.challenges.map((c, i) => {
@@ -185,7 +185,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* CHRONICLE / PROCESS */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12">
           <SectionHeading eyebrow="Construction Chronicle"
             title={cs ? "From Deep Substructure to Urban Culmination" : "How This Project Is Delivered"}
             text={cs ? "Audited Milestones (4 Major Phases)" : undefined} />
@@ -232,7 +232,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {cs && (
         <>
           <section className="bg-pine-900">
-            <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+            <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12">
               <SectionHeading dark center eyebrow="Audited HSE & Compliance Standards"
                 title="Uncompromised Zero-Harm Safety & Concrete Reliability" text={cs.safetyIntro} />
               <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -251,7 +251,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </div>
           </section>
           <section className="bg-cream-100">
-            <div className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:px-10 lg:grid-cols-[1.2fr_.8fr] lg:px-16">
+            <div className="mx-auto grid w-full gap-10 px-5 py-24 md:px-10 lg:grid-cols-[1.2fr_.8fr] lg:px-16">
               <figure>
                 <Quote size={28} className="text-gold-500" />
                 <blockquote className="mt-4 font-display text-xl italic leading-8 text-pine-800 sm:text-[22px] sm:leading-9">
@@ -286,7 +286,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* RELATED */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading eyebrow="Explore Our Portfolio" title="Related Turnkey Monuments" />
             <Link href="/projects" className="btn-outline-dark !py-2.5">View All Projects <ArrowUpRight size={15} /></Link>
@@ -315,7 +315,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* CTA */}
       <section className="bg-pine-800">
-        <div className="mx-auto max-w-7xl px-4 py-14 text-center sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 py-14 text-center sm:px-6 lg:px-12">
           <p className="eyebrow text-gold-400">Institutional General Contracting</p>
           <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl text-cream-100 sm:text-4xl">
             Planning a {project.category} Landmark in Pakistan?

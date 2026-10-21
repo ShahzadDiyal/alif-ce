@@ -23,7 +23,7 @@ export function PageHero({
 }: { eyebrow: string; title: string; text?: string }) {
   return (
     <section className="bg-pine-900 pb-14 pt-[150px] sm:pb-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full px-4 sm:px-6 lg:px-12">
         <p className="eyebrow anim-fade-up text-gold-400">{eyebrow}</p>
         <h1 className="anim-fade-up anim-delay-1 mt-4 max-w-3xl font-display text-4xl leading-tight text-cream-100 sm:text-5xl">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-[15px] leading-7 text-mist-300">{text}</p>}
@@ -99,7 +99,7 @@ export function ProjectCard({ project, dark = true }: { project: Project; dark?:
 export function CtaBand() {
   return (
     <section className="bg-cream-50">
-      <div className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full px-4 pb-24 sm:px-6 lg:px-12">
         <div className="reveal flex flex-col items-start justify-between gap-6 rounded-card bg-pine px-6 py-10 sm:px-10 lg:flex-row lg:items-center">
           <div>
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Ready to Build?</p>

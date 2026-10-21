@@ -39,7 +39,7 @@ export default function SectorsPage() {
     <>
       {/* Dark hero + explorer */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 pt-[136px] pb-16 sm:px-6 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
               <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Specialized Divisions • Domestic &amp; Industrial Horizons</p>
@@ -82,7 +82,7 @@ export default function SectorsPage() {
 
       {/* Matrix */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Technical Specification Comparison</p>
           <h2 className="reveal mt-3 font-display text-4xl text-ink">Cross-Sector Engineering Deliverables Matrix</h2>
           <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">

@@ -28,7 +28,7 @@ export default function ProjectsPage() {
           backgroundSize: "44px 44px",
         }}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12">
           <p className="eyebrow text-gold-400">Portfolio &amp; Archive — Nationwide</p>
           <h1 className="mt-4 max-w-3xl font-display text-4xl leading-tight text-cream-100 sm:text-5xl">
             Engineering Landmarks Across Pakistan
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
 
       {/* EXECUTION STANDARDS */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12">
           <p className="eyebrow text-gold-600">Execution Standards</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl leading-tight text-pine-800 sm:text-4xl">
             Engineered to International Quality &amp; Safety Thresholds
@@ -77,7 +77,7 @@ export default function ProjectsPage() {
 
       {/* CTA */}
       <section className="bg-pine-800">
-        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 py-14 sm:px-6 lg:px-12">
           <p className="eyebrow text-gold-400">EPC &amp; General Contracting</p>
           <div className="mt-3 flex flex-col justify-between gap-7 lg:flex-row lg:items-end">
             <div>

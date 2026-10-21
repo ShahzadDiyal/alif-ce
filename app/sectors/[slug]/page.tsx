@@ -40,7 +40,7 @@ export default async function SectorDetailPage({ params }: { params: Promise<{ s
   return (
     <>
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] pb-16">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 pt-[136px] pb-16">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-[12.5px] font-semibold text-muted">
             <Link href="/" className="hover:text-ink">Home</Link>
             <ChevronRight className="h-3.5 w-3.5" />
@@ -85,7 +85,7 @@ export default async function SectorDetailPage({ params }: { params: Promise<{ s
 
       {/* Scope & deliverables */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="reveal">
               <p className="flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">
@@ -121,7 +121,7 @@ export default async function SectorDetailPage({ params }: { params: Promise<{ s
       {/* Projects */}
       {projects.length > 0 && (
         <section className="bg-pine text-cream">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
             <div className="reveal flex flex-wrap items-end justify-between gap-4">
               <div>
                 <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Executed in This Sector</p>
@@ -140,7 +140,7 @@ export default async function SectorDetailPage({ params }: { params: Promise<{ s
 
       {/* Process */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">How We Deliver</p>
           <h2 className="reveal mt-3 font-display text-4xl text-ink">From Enquiry to Aftercare</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

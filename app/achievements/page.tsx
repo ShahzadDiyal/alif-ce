@@ -62,7 +62,7 @@ export default function AchievementsPage() {
     <>
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 pt-[136px] pb-16 sm:px-6 lg:px-12">
           <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Record &amp; Pedigree</p>
           <div className="mt-5 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
             <div>
@@ -111,7 +111,7 @@ export default function AchievementsPage() {
 
       {/* Licenses */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div className="reveal">
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Credentials</p>
@@ -180,7 +180,7 @@ export default function AchievementsPage() {
 
       {/* Timeline */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="reveal text-center">
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Historical Provenance</p>
             <h2 className="mt-3 font-display text-4xl text-ink">Four Decades of Engineering Milestones</h2>
@@ -245,7 +245,7 @@ export default function AchievementsPage() {
 
       {/* HSE rules + honors */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Safety Canon</p>
           <h2 className="reveal mt-3 font-display text-4xl text-ink">The Four HSE Golden Rules</h2>
           <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">

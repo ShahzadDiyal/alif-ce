@@ -35,7 +35,7 @@ export default function CareersPage() {
     <>
       {/* Dark hero */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 pt-[136px] pb-16 sm:px-6 lg:px-12">
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
               <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Talent Acquisition &amp; Engineering Cadre</p>
@@ -89,7 +89,7 @@ export default function CareersPage() {
 
       {/* Why ALIF */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div className="reveal">
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">The ALIF Standard</p>
@@ -115,7 +115,7 @@ export default function CareersPage() {
 
       {/* Vacancies */}
       <section id="vacancies" className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Active Opportunities</p>
           <h2 className="reveal mt-3 font-display text-4xl text-ink">Engineering Cadre Requisitions.</h2>
           <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
@@ -133,7 +133,7 @@ export default function CareersPage() {
 
       {/* MTE program */}
       <section id="mte" className="bg-paper">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 py-24 lg:grid-cols-[1fr_1.3fr]">
+        <div className="mx-auto grid w-full gap-10 px-4 sm:px-6 lg:px-12 py-24 lg:grid-cols-[1fr_1.3fr]">
           <div className="reveal relative overflow-hidden rounded-card">
             <Image src={IMAGES.hero} alt="Management Trainee Engineers on an ALIF site" width={1000} height={900} className="h-full min-h-[320px] w-full object-cover" />
             <span className="absolute bottom-4 left-4 rounded-md bg-gold px-3 py-1.5 text-[11px] font-bold tracking-wider text-ink uppercase">Young Professional Program</span>
@@ -166,7 +166,7 @@ export default function CareersPage() {
 
       {/* Application */}
       <section id="apply" className="bg-cream">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="reveal">
             <ApplicationForm />
           </div>

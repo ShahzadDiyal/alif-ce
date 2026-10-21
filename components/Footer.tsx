@@ -6,7 +6,7 @@ import { SECTORS, SITE } from "@/lib/data";
 export default function Footer() {
   return (
     <footer className="bg-pine-950 text-cream-100">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-14 sm:grid-cols-2 md:px-10 lg:grid-cols-4 lg:px-16">
+      <div className="mx-auto grid w-full gap-10 px-5 py-14 sm:grid-cols-2 md:px-10 lg:grid-cols-4 lg:px-16">
         <div>
           <Logo />
           <p className="mt-5 max-w-xs text-sm leading-6 text-mist-300">
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-cream-100/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-5 py-5 text-[11px] tracking-wide text-mist-300 sm:flex-row sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full flex-col items-center justify-between gap-2 px-5 py-5 text-[11px] tracking-wide text-mist-300 sm:flex-row sm:px-6 lg:px-12">
           <span>© {new Date().getFullYear()} {SITE.legalName} All Rights Reserved.</span>
           <span>PEC Category CA (No-Limit) • ISO 9001:2015 Certified</span>
         </div>

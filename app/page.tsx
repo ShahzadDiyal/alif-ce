@@ -16,7 +16,7 @@ export default function HomePage() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={IMAGES.hero} alt="High-rise construction site" className="hero-zoom absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-r from-pine-900 via-pine-900/85 to-pine-900/30" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-16 pt-14 md:px-10 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:px-16 lg:pb-20 lg:pt-20">
+        <div className="relative mx-auto grid w-full gap-10 px-5 pb-16 pt-14 md:px-10 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:px-16 lg:pb-20 lg:pt-20">
           <div>
             <p className="eyebrow anim-fade-up flex items-center gap-2 text-gold-400">
               <Building2 size={14} /> Engineering &amp; Construction — Pakistan
@@ -28,8 +28,8 @@ export default function HomePage() {
               Pakistan&apos;s premier general contracting firm delivering complex high-rise towers, national
               infrastructure, and landmark commercial engineering projects with uncompromised precision.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/contact#enquiry" className="btn-gold">Start Your Project <ArrowRight size={16} /></Link>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link href="/contact#enquiry" className="btn-gold max-sm:justify-center">Start Your Project <ArrowRight size={16} /></Link>
               <Link href="/projects" className="btn-outline-light">View Our Projects</Link>
             </div>
           </div>
@@ -49,7 +49,7 @@ export default function HomePage() {
 
       {/* STATS */}
       <section className="border-b border-cream-400 bg-cream-100">
-        <div className="mx-auto grid max-w-7xl grid-cols-2 px-5 md:px-10 lg:grid-cols-4 lg:px-16">
+        <div className="mx-auto grid w-full grid-cols-2 px-5 md:px-10 lg:grid-cols-4 lg:px-16">
           {STATS.map((s, i) => (
             <div key={s.label} className={`py-8 text-center ${i > 0 ? "border-l border-cream-400" : ""} ${i >= 2 ? "max-lg:border-t max-lg:border-cream-400" : ""} ${i === 2 ? "max-lg:border-l-0" : ""}`}>
               <div className="font-display text-4xl text-pine-800 sm:text-5xl"><CountUp value={parseInt(s.value)} /></div>
@@ -61,7 +61,7 @@ export default function HomePage() {
 
       {/* ABOUT */}
       <section className="bg-cream-50">
-        <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 py-24 md:px-10 lg:grid-cols-2 lg:px-16 lg:py-20">
+        <div className="mx-auto grid w-full items-center gap-10 px-5 py-24 md:px-10 lg:grid-cols-2 lg:px-16 lg:py-20">
           <div className="relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={IMAGES.building} alt="Modern building engineered by ALIF" loading="lazy" className="h-[320px] w-full rounded-xl object-cover sm:h-[400px]" />
@@ -100,7 +100,7 @@ export default function HomePage() {
 
       {/* SECTORS */}
       <section className="bg-cream-200/60">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12 lg:py-20">
           <SectionHeading center eyebrow="Our Core Expertise" title="Specialized Contracting Sectors" text="Engineering discipline across diverse building types." />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {SECTORS.map((s) => <SectorCard key={s.slug} sector={s} />)}
@@ -110,7 +110,7 @@ export default function HomePage() {
 
       {/* PROJECTS */}
       <section className="bg-pine-900">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12 lg:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading dark eyebrow="Selected Portfolio" title="Landmark Projects Across Pakistan" />
             <Link href="/projects" className="btn-outline-light !py-2.5">View All Projects</Link>
@@ -123,7 +123,7 @@ export default function HomePage() {
 
       {/* WHY ALIF */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12 lg:py-20">
           <SectionHeading center eyebrow="The ALIF Standard" title="Engineered for Reliability, Delivered with Distinction" />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
@@ -156,7 +156,7 @@ export default function HomePage() {
 
       {/* PROCESS */}
       <section className="bg-cream-200/60">
-        <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 lg:py-20">
+        <div className="mx-auto w-full px-4 py-24 sm:px-6 lg:px-12 lg:py-20">
           <SectionHeading center eyebrow="Our Work Methodology" title="From Concept to Turnkey Delivery" />
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((s, i) => (
@@ -185,7 +185,7 @@ export default function HomePage() {
 
       {/* CONTACT */}
       <section className="bg-cream-50" id="enquiry">
-        <div className="mx-auto grid max-w-7xl gap-10 px-5 py-24 md:px-10 lg:grid-cols-[1fr_1.1fr] lg:px-16 lg:py-20">
+        <div className="mx-auto grid w-full gap-10 px-5 py-24 md:px-10 lg:grid-cols-[1fr_1.1fr] lg:px-16 lg:py-20">
           <div>
             <SectionHeading eyebrow="Get in Touch" title="Start a Conversation" text="Our engineering estimating desk and project development directors are available for site visits, project tendering, and technical pre-qualifications nationwide." />
             <div className="mt-8 space-y-5">

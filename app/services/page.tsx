@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 pt-[136px] pb-16 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+        <div className="mx-auto grid w-full gap-10 px-4 sm:px-6 lg:px-12 pt-[136px] pb-16 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div>
             <p className="flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Integrated Contracting &amp; Technical Disciplines
@@ -97,7 +97,7 @@ export default function ServicesPage() {
 
       {/* Pillars */}
       <section id="pillars" className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Precision Methodologies</p>
@@ -137,7 +137,7 @@ export default function ServicesPage() {
 
       {/* Assurance framework */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Operational Execution Rigor</p>
           <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight text-white">Our Four-Phase Technical Assurance Framework</h2>
           <p className="mt-3 max-w-2xl text-[14.5px] text-mist">
@@ -168,7 +168,7 @@ export default function ServicesPage() {
 
       {/* Fleet */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Capital Plant Logistics</p>
@@ -196,7 +196,7 @@ export default function ServicesPage() {
 
       {/* RFP CTA */}
       <section className="bg-cream pb-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12">
           <div className="rounded-card bg-pine px-6 py-10 text-cream sm:px-10">
             <div className="grid gap-8 lg:grid-cols-[1.3fr_1fr]">
               <div>
