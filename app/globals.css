@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pine-950: #001915;
+  --color-pine-900: #0a2420;
+  --color-pine-800: #0e2f29;
+  --color-pine-700: #152e2a;
+  --color-pine-600: #2d4d46;
+  --color-pine-100: #c7eae0;
+  --color-cream-50: #fef9ef;
+  --color-cream-100: #f5f0e6;
+  --color-cream-200: #f2ede3;
+  --color-cream-300: #ede8de;
+  --color-cream-400: #e2dccb;
+  --color-gold-300: #fed489;
+  --color-gold-400: #e9c178;
+  --color-gold-500: #c6a15b;
+  --color-gold-600: #a9853d;
+  --color-gold-700: #775a1a;
+  --color-ink-900: #132a26;
+  --color-ink-600: #414846;
+  --color-ink-500: #5c6b66;
+  --color-mist-300: #a8b8b2;
+  --font-display: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-manrope), ui-sans-system, system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-cream-50); color: var(--color-ink-900); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--color-gold-500); color: var(--color-pine-950); }
+
+.eyebrow { font-size: 11px; letter-spacing: .22em; font-weight: 700; text-transform: uppercase; }
+.card { border: 1px solid var(--color-cream-400); border-radius: 12px; background: #fff; }
+.card-dark { border: 1px solid rgba(245,240,230,.14); border-radius: 12px; background: var(--color-pine-700); }
+.btn-gold { display:inline-flex; align-items:center; gap:.5rem; background:var(--color-gold-500); color:var(--color-pine-950); font-weight:700; font-size:.875rem; padding:.8rem 1.4rem; border-radius:12px; transition:.2s; }
+.btn-gold:hover { background: var(--color-gold-400); }
+.btn-outline-light { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(245,240,230,.7); color:var(--color-cream-100); font-weight:600; font-size:.875rem; padding:.8rem 1.4rem; border-radius:12px; transition:.2s; }
+.btn-outline-light:hover { border-color: var(--color-gold-500); color: var(--color-gold-300); }
+.btn-dark { display:inline-flex; align-items:center; gap:.5rem; background:var(--color-pine-800); color:var(--color-cream-100); font-weight:700; font-size:.875rem; padding:.8rem 1.4rem; border-radius:12px; transition:.2s; }
+.btn-dark:hover { background: var(--color-pine-900); }
+.btn-outline-dark { display:inline-flex; align-items:center; gap:.5rem; border:1px solid var(--color-pine-800); color:var(--color-pine-800); font-weight:600; font-size:.875rem; padding:.8rem 1.4rem; border-radius:12px; transition:.2s; }
+.btn-outline-dark:hover { border-color: var(--color-gold-600); color: var(--color-gold-700); }
+.field { width:100%; border:1px solid var(--color-cream-400); border-radius:12px; background:#fff; padding:.75rem 1rem; font-size:.9rem; color:var(--color-ink-900); outline:none; }
+.field:focus { border-color: var(--color-gold-500); box-shadow: 0 0 0 3px rgba(198,161,91,.18); }
+.gold-rule { height:1px; background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent); }
