@@ -145,7 +145,7 @@ export default function TenderForm() {
         </div>
       </div>
       <label className="mt-5 flex cursor-pointer items-start gap-2.5 text-[13px] leading-relaxed text-ink/80">
-        <input type="checkbox" name="nda" className="mt-0.5 h-4 w-4 shrink-0 accent-[#0E2F29]" />
+        <input type="checkbox" name="nda" className="mt-0.5 h-4 w-4 shrink-0 accent-[#0F3D36]" />
         <span>
           <strong>Require Mutual Non-Disclosure Agreement (NDA):</strong> Check here if your development board requires
           ALIF Engineering &amp; Construction to execute our standard institutional NDA prior to opening attached

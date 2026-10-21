@@ -111,7 +111,7 @@ export default function ApplicationForm() {
         </div>
       </div>
       <label className="mt-5 flex cursor-pointer items-start gap-2.5 text-[12.5px] leading-relaxed text-mist">
-        <input type="checkbox" name="certify" required className="mt-0.5 h-4 w-4 shrink-0 accent-[#C6A15B]" />
+        <input type="checkbox" name="certify" required className="mt-0.5 h-4 w-4 shrink-0 accent-[#C9A966]" />
         I certify that all information submitted is accurate and authorize ALIF Engineering &amp; Construction to verify
         my credentials with the Pakistan Engineering Council (PEC) and previous EPC contracting employers.
       </label>

@@ -116,7 +116,7 @@ export default function ProposalForm({ serviceTitle }: { serviceTitle: string })
         </div>
       </div>
       <label className="mt-5 flex cursor-pointer items-start gap-2.5 text-[13px] text-ink/80">
-        <input type="checkbox" name="nda" className="mt-0.5 h-4 w-4 accent-[#0E2F29]" />
+        <input type="checkbox" name="nda" className="mt-0.5 h-4 w-4 accent-[#0F3D36]" />
         We require ALIF Engineering to sign a mutual Non-Disclosure Agreement (NDA)
       </label>
       <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-btn bg-gold px-6 py-3.5 text-sm font-bold text-ink hover:bg-gold-light sm:w-auto">

@@ -6,13 +6,14 @@ import { SECTORS, SITE } from "@/lib/data";
 export default function Footer() {
   return (
     <footer className="bg-pine-950 text-cream-100">
-      <div className="mx-auto grid w-full gap-10 px-5 py-14 sm:grid-cols-2 md:px-10 lg:grid-cols-4 lg:px-16">
+      <div className="mx-auto grid w-full gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-12">
         <div>
           <Logo />
           <p className="mt-5 max-w-xs text-sm leading-6 text-mist-300">
             Leading high-rise and infrastructure general contracting firm in Pakistan.
             Delivering structural permanence and landmark commercial projects across the nation.
           </p>
+          <p className="mt-4 text-[11px] font-bold tracking-[0.22em] text-gold-400">QUALITY ENGINEERING. LASTING SPACES.</p>
           <p className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gold-500/30 bg-gold-500/10 px-3 py-1.5 text-[11px] font-bold tracking-wider text-gold-300">
             <BadgeCheck size={14} /> PEC Registered — CA No Limit
           </p>

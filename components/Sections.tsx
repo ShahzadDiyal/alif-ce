@@ -27,7 +27,7 @@ export function PageHero({
         <p className="eyebrow anim-fade-up text-gold-400">{eyebrow}</p>
         <h1 className="anim-fade-up anim-delay-1 mt-4 max-w-3xl font-display text-4xl leading-tight text-cream-100 sm:text-5xl">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-[15px] leading-7 text-mist-300">{text}</p>}
-        <div className="gold-rule mt-8 max-w-md !bg-none" style={{ background: "linear-gradient(90deg,#C6A15B,transparent)" }} />
+        <div className="gold-rule mt-8 max-w-md !bg-none" style={{ background: "linear-gradient(90deg,#C9A966,transparent)" }} />
       </div>
     </section>
   );

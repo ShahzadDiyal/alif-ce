@@ -86,7 +86,7 @@ export default function ContactPage() {
               <article key={o.label} className={`reveal reveal-d${i + 1} lift flex flex-col rounded-card border border-line bg-white p-5`}>
                 <p className="text-[10.5px] font-bold tracking-[0.16em] text-gold-dark uppercase">{o.tag}</p>
                 <h3 className="mt-1.5 font-display text-xl text-ink">{o.label}</h3>
-                <div className="relative mt-4 flex h-24 items-center justify-center overflow-hidden rounded-[10px] bg-pine/5" style={{ backgroundImage: "linear-gradient(#0e2f2912 1px, transparent 1px), linear-gradient(90deg, #0e2f2912 1px, transparent 1px)", backgroundSize: "18px 18px" }}>
+                <div className="relative mt-4 flex h-24 items-center justify-center overflow-hidden rounded-[10px] bg-pine/5" style={{ backgroundImage: "linear-gradient(#0F3D3612 1px, transparent 1px), linear-gradient(90deg, #0F3D3612 1px, transparent 1px)", backgroundSize: "18px 18px" }}>
                   <MapPin className="h-7 w-7 text-gold-dark" />
                 </div>
                 <p className="mt-4 text-[13px] leading-relaxed text-muted">{o.address}</p>
