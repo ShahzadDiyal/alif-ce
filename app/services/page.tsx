@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 pt-14 pb-14 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 pt-[136px] pb-14 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div>
             <p className="flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Integrated Contracting &amp; Technical Disciplines

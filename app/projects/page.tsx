@@ -21,7 +21,7 @@ export default function ProjectsPage() {
     <>
       {/* HERO */}
       <section
-        className="bg-pine-900 pb-14 pt-14 sm:pb-16"
+        className="bg-pine-900 pb-14 pt-[150px] sm:pb-16"
         style={{
           backgroundImage:
             "linear-gradient(rgba(245,240,230,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(245,240,230,0.045) 1px, transparent 1px)",

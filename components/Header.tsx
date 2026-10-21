@@ -14,7 +14,7 @@ export default function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   return (
-    <header className="sticky top-0 z-50">
+    <header className="fixed inset-x-0 top-0 z-50">
       <div className="bg-pine-950 text-[11px] font-semibold uppercase tracking-wider text-mist-300">
         <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-16">
           <div className="flex items-center gap-6">

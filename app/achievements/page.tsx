@@ -41,7 +41,7 @@ export default function AchievementsPage() {
   return (
     <>
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-14 pb-12">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] pb-12">
           <p className="anim-fade-up flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">
             <span className="h-1.5 w-1.5 rounded-full bg-gold live-dot" /> Milestones &amp; Institutional Recognition
           </p>
