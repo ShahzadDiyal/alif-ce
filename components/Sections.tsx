@@ -38,7 +38,7 @@ export function SectorCard({ sector }: { sector: Sector }) {
     <article className="card reveal lift group overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={sector.image} alt={sector.title} loading="lazy" className="h-40 w-full object-cover" />
-      <div className="p-5">
+      <div className="p-6">
         <h3 className="font-display text-lg text-pine-800">{sector.title}</h3>
         <p className="mt-2 text-sm leading-6 text-ink-500">{sector.short}</p>
         <Link href={`/sectors/${sector.slug}`} className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-gold-700 hover:text-gold-600">
@@ -54,7 +54,7 @@ export function ServiceCard({ service }: { service: Service }) {
     <article className="card reveal lift group overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={service.image} alt={service.title} loading="lazy" className="h-40 w-full object-cover" />
-      <div className="p-5">
+      <div className="p-6">
         <h3 className="font-display text-lg text-pine-800">{service.title}</h3>
         <p className="mt-2 text-sm leading-6 text-ink-500">{service.short}</p>
         <Link href={`/services/${service.slug}`} className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-gold-700 hover:text-gold-600">
@@ -77,7 +77,7 @@ export function ProjectCard({ project, dark = true }: { project: Project; dark?:
           {project.status}
         </span>
       </div>
-      <div className="p-5">
+      <div className="p-6">
         <p className={`eyebrow !text-[10px] ${dark ? "text-gold-400" : "text-gold-600"}`}>{project.category}</p>
         <h3 className={`mt-2 font-display text-xl leading-snug ${dark ? "text-cream-100" : "text-pine-800"}`}>
           <Link href={`/projects/${project.slug}`} className="hover:text-gold-500">{project.title}</Link>

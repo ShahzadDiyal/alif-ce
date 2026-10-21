@@ -40,7 +40,7 @@
 }
 
 html { scroll-behavior: smooth; }
-body { background: var(--color-cream-50); color: var(--color-ink-900); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; }
+body { background: var(--color-cream-50); color: var(--color-ink-900); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; line-height: 1.65; letter-spacing: 0.005em; }
 ::selection { background: var(--color-gold-500); color: var(--color-pine-950); }
 
 .eyebrow { font-size: 11px; letter-spacing: .22em; font-weight: 700; text-transform: uppercase; }
@@ -54,7 +54,7 @@ body { background: var(--color-cream-50); color: var(--color-ink-900); font-fami
 .btn-dark:hover { background: var(--color-pine-900); }
 .btn-outline-dark { display:inline-flex; align-items:center; gap:.5rem; border:1px solid var(--color-pine-800); color:var(--color-pine-800); font-weight:600; font-size:.875rem; padding:.8rem 1.4rem; border-radius:12px; transition:.2s; }
 .btn-outline-dark:hover { border-color: var(--color-gold-600); color: var(--color-gold-700); }
-.field { width:100%; border:1px solid var(--color-cream-400); border-radius:12px; background:#fff; padding:.75rem 1rem; font-size:.9rem; color:var(--color-ink-900); outline:none; }
+.field { width:100%; border:1px solid var(--color-cream-400); border-radius:12px; background:#fff; padding:.9rem 1.05rem; font-size:.9rem; color:var(--color-ink-900); outline:none; }
 .field:focus { border-color: var(--color-gold-500); box-shadow: 0 0 0 3px rgba(198,161,91,.18); }
 .gold-rule { height:1px; background: linear-gradient(90deg, transparent, var(--color-gold-500), transparent); }
 

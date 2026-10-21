@@ -106,7 +106,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* NARRATIVE + SPEC MATRIX */}
       <section className="bg-cream-50">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-16 md:px-10 lg:grid-cols-2 lg:px-16">
+        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 md:px-10 lg:grid-cols-2 lg:px-16">
           <div>
             <SectionHeading eyebrow="Architectural & Structural Narrative"
               title={cs ? "Engineering a Vertical Benchmark in Central Punjab" : "About This Project"} />
@@ -158,13 +158,13 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {/* CHALLENGES — flagship case study */}
       {cs && (
         <section className="bg-cream-200/50">
-          <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16">
+          <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16">
             <SectionHeading eyebrow="Execution Rigor" title="Complex Engineering Challenges & Tailored Solutions" text={cs.challengesIntro} />
-            <div className="mt-9 grid gap-5 lg:grid-cols-3">
+            <div className="mt-9 grid gap-6 lg:grid-cols-3">
               {cs.challenges.map((c, i) => {
                 const Icon = CHALLENGE_ICONS[i % CHALLENGE_ICONS.length];
                 return (
-                  <article key={c.title} className="card p-6">
+                  <article key={c.title} className="card p-7">
                     <div className="flex items-center justify-between">
                       <Icon size={24} className="text-gold-600" strokeWidth={1.6} />
                       <span className="text-[11px] font-bold uppercase tracking-widest text-ink-500">Challenge 0{i + 1}</span>
@@ -185,13 +185,13 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* CHRONICLE / PROCESS */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16">
           <SectionHeading eyebrow="Construction Chronicle"
             title={cs ? "From Deep Substructure to Urban Culmination" : "How This Project Is Delivered"}
             text={cs ? "Audited Milestones (4 Major Phases)" : undefined} />
           {cs ? (
             <>
-              <div className="mt-9 grid gap-5 lg:grid-cols-3">
+              <div className="mt-9 grid gap-6 lg:grid-cols-3">
                 {cs.phases.map((ph) => (
                   <article key={ph.title} className="card overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -215,9 +215,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
               </div>
             </>
           ) : (
-            <div className="mt-9 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {PROCESS_STEPS.map((s, i) => (
-                <div key={s.title} className="card p-6">
+                <div key={s.title} className="card p-7">
                   <div className="font-display text-3xl text-gold-500">0{i + 1}</div>
                   <h3 className="mt-3 font-display text-lg text-pine-800">{s.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-ink-600">{s.text}</p>
@@ -232,10 +232,10 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
       {cs && (
         <>
           <section className="bg-pine-900">
-            <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16">
+            <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16">
               <SectionHeading dark center eyebrow="Audited HSE & Compliance Standards"
                 title="Uncompromised Zero-Harm Safety & Concrete Reliability" text={cs.safetyIntro} />
-              <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {cs.safety.map((s, i) => {
                   const Icon = SAFETY_ICONS[i % SAFETY_ICONS.length];
                   return (
@@ -251,7 +251,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             </div>
           </section>
           <section className="bg-cream-100">
-            <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-16 md:px-10 lg:grid-cols-[1.2fr_.8fr] lg:px-16">
+            <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 md:px-10 lg:grid-cols-[1.2fr_.8fr] lg:px-16">
               <figure>
                 <Quote size={28} className="text-gold-500" />
                 <blockquote className="mt-4 font-display text-xl italic leading-8 text-pine-800 sm:text-[22px] sm:leading-9">
@@ -286,12 +286,12 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
       {/* RELATED */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading eyebrow="Explore Our Portfolio" title="Related Turnkey Monuments" />
             <Link href="/projects" className="btn-outline-dark !py-2.5">View All Projects <ArrowUpRight size={15} /></Link>
           </div>
-          <div className="mt-9 grid gap-5 lg:grid-cols-2">
+          <div className="mt-9 grid gap-6 lg:grid-cols-2">
             {others.map((p) => (
               <article key={p.slug} className="card group overflow-hidden sm:grid sm:grid-cols-[220px_1fr]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}

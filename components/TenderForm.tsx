@@ -5,7 +5,7 @@ import { BadgeCheck, CheckCircle2, Lock, Paperclip, Send } from "lucide-react";
 import { SITE } from "@/lib/data";
 
 const inputCls =
-  "w-full rounded-[10px] border border-line bg-paper px-3.5 py-2.5 text-sm text-ink outline-none placeholder:text-muted/60 focus:border-gold focus:ring-2 focus:ring-gold/30";
+  "w-full rounded-[10px] border border-line bg-paper px-4 py-3 text-sm text-ink outline-none placeholder:text-muted/60 focus:border-gold focus:ring-2 focus:ring-gold/30";
 const labelCls = "mb-1.5 block text-[11px] font-bold tracking-[0.14em] text-ink uppercase";
 
 const SECTORS = [
@@ -87,10 +87,10 @@ export default function TenderForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-card border border-line bg-white p-6 sm:p-8">
+    <form onSubmit={handleSubmit} className="rounded-card border border-line bg-white p-7 sm:p-8">
       <h3 className="font-display text-2xl text-ink">Submit Tender / RFP Package</h3>
       <p className="mt-1.5 text-[13px] text-muted">Please provide your organization&apos;s credentials and key project parameters to initiate estimating analysis.</p>
-      <div className="mt-6 grid gap-5 sm:grid-cols-2">
+      <div className="mt-6 grid gap-6 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="tf-name">Full Name &amp; Designation *</label>
           <input id="tf-name" name="name" required className={inputCls} />

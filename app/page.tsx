@@ -61,7 +61,7 @@ export default function HomePage() {
 
       {/* ABOUT */}
       <section className="bg-cream-50">
-        <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 py-16 md:px-10 lg:grid-cols-2 lg:px-16 lg:py-20">
+        <div className="mx-auto grid max-w-[1440px] items-center gap-10 px-5 py-24 md:px-10 lg:grid-cols-2 lg:px-16 lg:py-20">
           <div className="relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={IMAGES.building} alt="Modern building engineered by ALIF" loading="lazy" className="h-[320px] w-full rounded-xl object-cover sm:h-[400px]" />
@@ -100,9 +100,9 @@ export default function HomePage() {
 
       {/* SECTORS */}
       <section className="bg-cream-200/60">
-        <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16 lg:py-20">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16 lg:py-20">
           <SectionHeading center eyebrow="Our Core Expertise" title="Specialized Contracting Sectors" text="Engineering discipline across diverse building types." />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {SECTORS.map((s) => <SectorCard key={s.slug} sector={s} />)}
           </div>
         </div>
@@ -110,12 +110,12 @@ export default function HomePage() {
 
       {/* PROJECTS */}
       <section className="bg-pine-900">
-        <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16 lg:py-20">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16 lg:py-20">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <SectionHeading dark eyebrow="Selected Portfolio" title="Landmark Projects Across Pakistan" />
             <Link href="/projects" className="btn-outline-light !py-2.5">View All Projects</Link>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {PROJECTS.slice(0, 3).map((p) => <ProjectCard key={p.slug} project={p} />)}
           </div>
         </div>
@@ -123,16 +123,16 @@ export default function HomePage() {
 
       {/* WHY ALIF */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16 lg:py-20">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16 lg:py-20">
           <SectionHeading center eyebrow="The ALIF Standard" title="Engineered for Reliability, Delivered with Distinction" />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { icon: Clock3, title: "On-Time Delivery", text: "Guaranteed milestone adherence through advanced Primavera P6 resource leveling and rigorous site scheduling." },
               { icon: DraftingCompass, title: "In-House Engineering", text: "Complete structural BIM modeling, value-engineering, and geotechnical domain mastery under one corporate roof." },
               { icon: ShieldCheck, title: "HSE & ISO Standards", text: "Triple-certified ISO 9001, ISO 14001, and ISO 45001 compliance with zero-compromise safety protocols." },
               { icon: Users, title: "Single-Point Accountability", text: "Integrated project management eliminating subcontractor fragmentation from shoring to commissioning." },
             ].map((f) => (
-              <div key={f.title} className="card p-6">
+              <div key={f.title} className="card p-7">
                 <f.icon size={26} className="text-gold-600" strokeWidth={1.6} />
                 <h3 className="mt-4 font-display text-lg text-pine-800">{f.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-ink-500">{f.text}</p>
@@ -156,11 +156,11 @@ export default function HomePage() {
 
       {/* PROCESS */}
       <section className="bg-cream-200/60">
-        <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16 lg:py-20">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16 lg:py-20">
           <SectionHeading center eyebrow="Our Work Methodology" title="From Concept to Turnkey Delivery" />
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {PROCESS_STEPS.map((s, i) => (
-              <div key={s.title} className="card p-6">
+              <div key={s.title} className="card p-7">
                 <div className="font-display text-3xl text-gold-500">0{i + 1}</div>
                 <h3 className="mt-3 font-display text-lg text-pine-800">{s.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-ink-500">{s.text}</p>
@@ -185,7 +185,7 @@ export default function HomePage() {
 
       {/* CONTACT */}
       <section className="bg-cream-50" id="enquiry">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-16 md:px-10 lg:grid-cols-[1fr_1.1fr] lg:px-16 lg:py-20">
+        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 py-24 md:px-10 lg:grid-cols-[1fr_1.1fr] lg:px-16 lg:py-20">
           <div>
             <SectionHeading eyebrow="Get in Touch" title="Start a Conversation" text="Our engineering estimating desk and project development directors are available for site visits, project tendering, and technical pre-qualifications nationwide." />
             <div className="mt-8 space-y-5">

@@ -58,14 +58,14 @@ export default function ProjectsPage() {
 
       {/* EXECUTION STANDARDS */}
       <section className="bg-cream-50">
-        <div className="mx-auto max-w-[1440px] px-5 py-16 md:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 lg:px-16">
           <p className="eyebrow text-gold-600">Execution Standards</p>
           <h2 className="mt-3 max-w-2xl font-display text-3xl leading-tight text-pine-800 sm:text-4xl">
             Engineered to International Quality &amp; Safety Thresholds
           </h2>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {STANDARDS.map((s) => (
-              <div key={s.title} className="card p-6">
+              <div key={s.title} className="card p-7">
                 <s.icon size={26} className="text-gold-600" strokeWidth={1.6} />
                 <h3 className="mt-4 font-display text-lg text-pine-800">{s.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-ink-500">{s.text}</p>

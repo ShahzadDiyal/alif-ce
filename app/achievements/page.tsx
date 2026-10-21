@@ -62,7 +62,7 @@ export default function AchievementsPage() {
     <>
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-16 sm:px-6 lg:px-8">
           <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Record &amp; Pedigree</p>
           <div className="mt-5 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
             <div>
@@ -111,7 +111,7 @@ export default function AchievementsPage() {
 
       {/* Licenses */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div className="reveal">
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Credentials</p>
@@ -122,9 +122,9 @@ export default function AchievementsPage() {
               across quality, environmental stability, and worker life safety.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {LICENSES.map((l, i) => (
-              <div key={l.title} className={`reveal reveal-d${(i % 3) + 1} lift flex flex-col rounded-card border border-line bg-white p-6`}>
+              <div key={l.title} className={`reveal reveal-d${(i % 3) + 1} lift flex flex-col rounded-card border border-line bg-white p-7`}>
                 <div className="flex items-center justify-between text-[11px] font-bold tracking-wider uppercase">
                   <span className="text-gold-dark">{l.tag}</span>
                   <span className="rounded-md bg-cream px-2 py-1 font-mono text-[10.5px] text-ink">{l.reg}</span>
@@ -180,7 +180,7 @@ export default function AchievementsPage() {
 
       {/* Timeline */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="reveal text-center">
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Historical Provenance</p>
             <h2 className="mt-3 font-display text-4xl text-ink">Four Decades of Engineering Milestones</h2>
@@ -245,16 +245,16 @@ export default function AchievementsPage() {
 
       {/* HSE rules + honors */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Safety Canon</p>
           <h2 className="reveal mt-3 font-display text-4xl text-ink">The Four HSE Golden Rules</h2>
           <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
             Safety is not an administrative metric; it is an unyielding structural mandate. Every tradesperson,
             superintendent, and executive on an ALIF project site is bound by these four immutable laws.
           </p>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {RULES.map((r, i) => (
-              <div key={r.n} className={`reveal reveal-d${i + 1} lift flex flex-col rounded-card border border-line bg-white p-6`}>
+              <div key={r.n} className={`reveal reveal-d${i + 1} lift flex flex-col rounded-card border border-line bg-white p-7`}>
                 <p className="flex items-center justify-between">
                   <ShieldCheck className="h-6 w-6 text-gold-dark" />
                   <span className="text-[11px] font-bold tracking-wider text-muted uppercase">Covenant {r.n}</span>
@@ -271,9 +271,9 @@ export default function AchievementsPage() {
           <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
             Conferred by national engineering congresses, prime developer consortiums, and academia for groundbreaking concrete technology and safety performance.
           </p>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             {HONORS.map((h, i) => (
-              <div key={h.title} className={`reveal reveal-d${i + 1} lift rounded-card bg-cream p-6`}>
+              <div key={h.title} className={`reveal reveal-d${i + 1} lift rounded-card bg-cream p-7`}>
                 <div className="flex items-center justify-between">
                   <span className="font-display text-3xl text-gold-dark">{h.year}</span>
                   <h.icon className="h-6 w-6 text-gold-dark" />

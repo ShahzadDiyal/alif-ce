@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 pt-[136px] pb-14 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:px-8 pt-[136px] pb-16 lg:grid-cols-[1.3fr_1fr] lg:items-center">
           <div>
             <p className="flex items-center gap-2 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">
               <span className="h-1.5 w-1.5 rounded-full bg-gold" /> Integrated Contracting &amp; Technical Disciplines
@@ -97,7 +97,7 @@ export default function ServicesPage() {
 
       {/* Pillars */}
       <section id="pillars" className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Precision Methodologies</p>
@@ -137,15 +137,15 @@ export default function ServicesPage() {
 
       {/* Assurance framework */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Operational Execution Rigor</p>
           <h2 className="mt-3 max-w-2xl font-display text-4xl leading-tight text-white">Our Four-Phase Technical Assurance Framework</h2>
           <p className="mt-3 max-w-2xl text-[14.5px] text-mist">
             From bid qualification to formal DLP handover, every ALIF contract adheres to ISO 9001:2015 quality gates and Primavera P6 algorithmic CPM tracking.
           </p>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {PHASES.map((p) => (
-              <div key={p.n} className="reveal rounded-card border border-white/10 bg-pine-deep p-6">
+              <div key={p.n} className="reveal rounded-card border border-white/10 bg-pine-deep p-7">
                 <p className="font-display text-4xl text-gold">{p.n}</p>
                 <h3 className="mt-3 font-display text-lg leading-snug text-white">{p.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-mist">{p.text}</p>
@@ -168,7 +168,7 @@ export default function ServicesPage() {
 
       {/* Fleet */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Capital Plant Logistics</p>
@@ -178,7 +178,7 @@ export default function ServicesPage() {
               Complete self-reliance without third-party machinery bottlenecks. Our dedicated equipment depots guarantee immediate deployment across Pakistan.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {FLEET.map((f) => (
               <article key={f.title} className="reveal lift overflow-hidden rounded-card border border-line bg-white">
                 <Image src={f.img} alt={f.title} width={600} height={380} className="h-32 w-full object-cover" />

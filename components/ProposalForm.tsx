@@ -5,7 +5,7 @@ import { BadgeCheck, CheckCircle2, Paperclip, Send } from "lucide-react";
 import { SITE } from "@/lib/data";
 
 const inputCls =
-  "w-full rounded-[10px] border border-line bg-paper px-3.5 py-2.5 text-sm text-ink outline-none placeholder:text-muted/60 focus:border-gold focus:ring-2 focus:ring-gold/30";
+  "w-full rounded-[10px] border border-line bg-paper px-4 py-3 text-sm text-ink outline-none placeholder:text-muted/60 focus:border-gold focus:ring-2 focus:ring-gold/30";
 const labelCls = "mb-1.5 block text-[11px] font-bold tracking-[0.14em] text-ink uppercase";
 
 export default function ProposalForm({ serviceTitle }: { serviceTitle: string }) {
@@ -55,8 +55,8 @@ export default function ProposalForm({ serviceTitle }: { serviceTitle: string })
   }
 
   return (
-    <form onSubmit={handleSubmit} className="rounded-card border border-line bg-white p-6 sm:p-8">
-      <div className="grid gap-5 sm:grid-cols-2">
+    <form onSubmit={handleSubmit} className="rounded-card border border-line bg-white p-7 sm:p-8">
+      <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="pf-project">Project Name / Working Title *</label>
           <input id="pf-project" name="project" required placeholder="e.g. Alif Horizon Landmark Towers" className={inputCls} />

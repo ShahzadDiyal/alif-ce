@@ -58,7 +58,7 @@ export default function CareersExplorer() {
       </div>
       <div className="mt-6 space-y-4">
         {shown.map((j) => (
-          <article key={j.title} className="anim-fade-up lift grid gap-4 rounded-card border border-line bg-white p-6 lg:grid-cols-[1fr_auto] lg:items-center">
+          <article key={j.title} className="anim-fade-up lift grid gap-4 rounded-card border border-line bg-white p-7 lg:grid-cols-[1fr_auto] lg:items-center">
             <div>
               <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-[11.5px] font-bold tracking-wide uppercase">
                 <span className="text-gold-dark">{j.discipline}</span>
@@ -74,7 +74,7 @@ export default function CareersExplorer() {
             </button>
           </article>
         ))}
-        {shown.length === 0 && <p className="rounded-card border border-line bg-white p-6 text-sm text-muted">No open requisitions in this discipline right now — submit a general dossier below.</p>}
+        {shown.length === 0 && <p className="rounded-card border border-line bg-white p-7 text-sm text-muted">No open requisitions in this discipline right now — submit a general dossier below.</p>}
       </div>
     </div>
   );

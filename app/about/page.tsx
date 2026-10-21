@@ -89,7 +89,7 @@ export default function AboutPage() {
 
       {/* Manifesto */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid gap-12 lg:grid-cols-[1.35fr_1fr]">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Our Foundational Manifesto</p>
@@ -145,9 +145,9 @@ export default function AboutPage() {
           </div>
 
           {/* Pillars */}
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
             {PILLARS.map((p) => (
-              <div key={p.title} className="rounded-card border border-line bg-white p-6">
+              <div key={p.title} className="rounded-card border border-line bg-white p-7">
                 <div className="flex items-center justify-between">
                   <p.icon className="h-6 w-6 text-gold-dark" />
                   <span className="text-[11px] font-bold tracking-[0.18em] text-muted uppercase">Pillar {p.n}</span>
@@ -162,14 +162,14 @@ export default function AboutPage() {
 
       {/* Leadership */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 text-center">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Governance &amp; Academic Rigor</p>
           <h2 className="mx-auto mt-3 max-w-2xl font-display text-4xl leading-tight text-ink">Executive Leadership &amp; Technical Directorate</h2>
           <p className="mx-auto mt-4 max-w-2xl text-[14.5px] leading-relaxed text-muted">
             Led by licensed professional engineers with international credentials spanning MIT, Imperial College London,
             UET Lahore, and Fellowship appointments in the Pakistan Engineering Council.
           </p>
-          <div className="mt-10 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 text-left sm:grid-cols-2 lg:grid-cols-4">
             {LEADERS.map((l) => (
               <article key={l.name} className="reveal lift overflow-hidden rounded-card border border-line bg-white">
                 <div className="relative">
@@ -193,15 +193,15 @@ export default function AboutPage() {
 
       {/* Credentials */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 text-center">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24 text-center">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Statutory Clearance &amp; Accreditation</p>
           <h2 className="mt-3 font-display text-4xl text-white">Sanctioned by Apex Regulatory Bodies</h2>
           <p className="mx-auto mt-3 max-w-2xl text-[14.5px] text-mist">
             Our operational workflows conform to certified global standards of technical safety, quality management, and environmental mitigation.
           </p>
-          <div className="mt-10 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
             {CREDENTIALS.map((c) => (
-              <div key={c.title} className="reveal lift rounded-card border border-white/10 bg-pine-deep p-6">
+              <div key={c.title} className="reveal lift rounded-card border border-white/10 bg-pine-deep p-7">
                 <div className="flex items-center justify-between">
                   <c.icon className="h-6 w-6 text-gold" />
                   <span className="rounded-md bg-gold/15 px-2 py-1 text-[10.5px] font-bold tracking-wider text-gold-light uppercase">{c.tag}</span>
@@ -217,7 +217,7 @@ export default function AboutPage() {
 
       {/* Fleet */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-end">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Mechanized Independence</p>
@@ -228,9 +228,9 @@ export default function AboutPage() {
               With four centralized machinery depots in Lahore, Karachi, Rawalpindi, and Multan, our logistics engine operates round-the-clock.
             </p>
           </div>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {FLEET.map((f) => (
-              <div key={f.unit} className="reveal lift rounded-card border border-line bg-cream p-6">
+              <div key={f.unit} className="reveal lift rounded-card border border-line bg-cream p-7">
                 <p className="font-display text-5xl text-ink">{f.value} <span className="text-lg text-gold-dark">{f.unit}</span></p>
                 <p className="mt-3 text-[13.5px] leading-relaxed text-muted">{f.text}</p>
                 <p className="mt-4 flex items-center gap-1.5 text-[11px] font-bold tracking-wider text-gold-dark uppercase">

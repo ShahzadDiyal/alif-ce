@@ -63,7 +63,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Hero */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] pb-14">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-[136px] pb-16">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-1.5 text-[12.5px] font-semibold text-muted">
             <Link href="/" className="hover:text-ink">Home</Link>
             <ChevronRight className="h-3.5 w-3.5" />
@@ -89,7 +89,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 </a>
               </div>
             </div>
-            <aside className="h-fit rounded-card border border-line bg-white p-6">
+            <aside className="h-fit rounded-card border border-line bg-white p-7">
               <p className="flex items-center gap-2 text-[11px] font-bold tracking-[0.18em] text-gold-dark uppercase">
                 <ShieldCheck className="h-4 w-4" /> Institutional Delivery Standard
               </p>
@@ -111,7 +111,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Lifecycle */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Execution Architecture</p>
           <h2 className="mt-3 font-display text-4xl text-ink">Comprehensive Turnkey Lifecycle</h2>
           <p className="mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
@@ -120,7 +120,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </p>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
             {service.lifecycle.map((ph, i) => (
-              <article key={ph.title} className="flex flex-col rounded-card border border-line bg-white p-6">
+              <article key={ph.title} className="flex flex-col rounded-card border border-line bg-white p-7">
                 <div className="flex items-center justify-between">
                   <SquareTerminal className="h-6 w-6 text-gold-dark" />
                   <span className="text-[11px] font-bold tracking-[0.18em] text-muted uppercase">Pillar 0{i + 1}</span>
@@ -143,7 +143,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Matrices */}
       <section id="matrices" className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Engineering Benchmarks</p>
@@ -158,7 +158,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <span>Engineering Category</span><span>Technical Specification &amp; Protocols</span><span>Statutory / Governing Body</span>
             </div>
             {service.matrix.map((row) => (
-              <div key={row.category} className="grid gap-1.5 border-b border-line px-6 py-4 last:border-0 md:grid-cols-[220px_1fr_240px] md:gap-4">
+              <div key={row.category} className="grid gap-1.5 border-b border-line px-6 py-5 last:border-0 md:grid-cols-[220px_1fr_240px] md:gap-4">
                 <p className="text-[13.5px] font-bold text-ink">{row.category}</p>
                 <p className="font-mono text-[12.5px] leading-relaxed text-ink/75">{row.spec}</p>
                 <p className="text-[12.5px] font-semibold text-gold-dark">{row.body}</p>
@@ -170,7 +170,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Milestones */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="flex flex-wrap items-end justify-between gap-4">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Executed Monumental Portfolio</p>
@@ -203,7 +203,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Zero-harm */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr]">
             <div>
               <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Institutional Safeguard Standards</p>
@@ -213,7 +213,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 works coordinators (TWC), 100% certified fall-arrest perimeters, and digital biometric site access to
                 ensure institutional safety on every active elevation.
               </p>
-              <div className="mt-8 grid gap-5 sm:grid-cols-2">
+              <div className="mt-8 grid gap-6 sm:grid-cols-2">
                 <div className="rounded-card border border-white/10 bg-pine-deep p-5">
                   <HeartPulse className="h-6 w-6 text-gold" />
                   <h3 className="mt-3 font-display text-lg text-white">BS 5975 Temporary Works</h3>
@@ -226,7 +226,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                 </div>
               </div>
             </div>
-            <div className="h-fit rounded-card border border-gold/40 bg-pine-deep p-6">
+            <div className="h-fit rounded-card border border-gold/40 bg-pine-deep p-7">
               <p className="text-[11px] font-bold tracking-[0.18em] text-gold-light uppercase">Safety Milestone Reached</p>
               <p className="mt-3 font-display text-6xl text-white">1.85M</p>
               <p className="mt-1 font-display text-xl text-gold-light">Safe Man-Hours</p>
@@ -244,7 +244,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
 
       {/* Proposal form */}
       <section id="proposal" className="bg-cream">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Procurement</p>
             <h2 className="mt-3 font-display text-4xl text-ink">Request {service.title} Technical Proposal</h2>

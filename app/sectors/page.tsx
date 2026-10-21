@@ -39,7 +39,7 @@ export default function SectorsPage() {
     <>
       {/* Dark hero + explorer */}
       <section className="bg-pine text-cream">
-        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 pt-[136px] pb-16 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
               <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Specialized Divisions • Domestic &amp; Industrial Horizons</p>
@@ -82,7 +82,7 @@ export default function SectorsPage() {
 
       {/* Matrix */}
       <section className="bg-cream">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
           <p className="reveal text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Technical Specification Comparison</p>
           <h2 className="reveal mt-3 font-display text-4xl text-ink">Cross-Sector Engineering Deliverables Matrix</h2>
           <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
@@ -92,21 +92,21 @@ export default function SectorsPage() {
             <table className="w-full min-w-[880px] text-left text-[13px]">
               <thead>
                 <tr className="bg-pine text-[11px] font-bold tracking-[0.14em] text-gold-light uppercase">
-                  <th className="px-5 py-3.5">Sector Vertical</th>
-                  <th className="px-5 py-3.5">BIM LOD Model</th>
-                  <th className="px-5 py-3.5">Structural Design Code</th>
-                  <th className="px-5 py-3.5">MEP Complexity</th>
-                  <th className="px-5 py-3.5">Primary Statutory Body</th>
+                  <th className="px-5 py-4.5">Sector Vertical</th>
+                  <th className="px-5 py-4.5">BIM LOD Model</th>
+                  <th className="px-5 py-4.5">Structural Design Code</th>
+                  <th className="px-5 py-4.5">MEP Complexity</th>
+                  <th className="px-5 py-4.5">Primary Statutory Body</th>
                 </tr>
               </thead>
               <tbody>
                 {MATRIX.map((row) => (
                   <tr key={row[0]} className="border-t border-line hover:bg-cream/60">
-                    <td className="px-5 py-3.5 font-bold text-ink">{row[0]}</td>
-                    <td className="px-5 py-3.5 font-mono text-[12px] text-ink/75">{row[1]}</td>
-                    <td className="px-5 py-3.5 font-mono text-[12px] text-ink/75">{row[2]}</td>
-                    <td className="px-5 py-3.5 text-muted">{row[3]}</td>
-                    <td className="px-5 py-3.5 font-semibold text-gold-dark">{row[4]}</td>
+                    <td className="px-5 py-4.5 font-bold text-ink">{row[0]}</td>
+                    <td className="px-5 py-4.5 font-mono text-[12px] text-ink/75">{row[1]}</td>
+                    <td className="px-5 py-4.5 font-mono text-[12px] text-ink/75">{row[2]}</td>
+                    <td className="px-5 py-4.5 text-muted">{row[3]}</td>
+                    <td className="px-5 py-4.5 font-semibold text-gold-dark">{row[4]}</td>
                   </tr>
                 ))}
               </tbody>
