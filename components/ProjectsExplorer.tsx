@@ -74,7 +74,7 @@ export default function ProjectsExplorer() {
     <>
       {/* FILTER BAR */}
       <section className="border-b border-cream-400 bg-cream-100">
-        <div className="mx-auto max-w-[1440px] px-5 py-5 md:px-10 lg:px-16">
+        <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2">
             {PROJECT_FILTERS.map((f) => (
               <button
@@ -120,7 +120,7 @@ export default function ProjectsExplorer() {
       {/* FEATURED */}
       {showFeatured && (
         <section className="bg-cream-50">
-          <div className="mx-auto max-w-[1440px] px-5 py-14 md:px-10 lg:px-16">
+          <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
             <div className="flex flex-wrap items-end justify-between gap-3">
               <div>
                 <p className="eyebrow text-gold-600">Featured Masterpiece</p>
@@ -175,7 +175,7 @@ export default function ProjectsExplorer() {
 
       {/* ARCHIVE */}
       <section className="bg-cream-200/50">
-        <div className="mx-auto max-w-[1440px] px-5 py-14 md:px-10 lg:px-16">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-end justify-between gap-3">
             <div>
               <p className="eyebrow text-gold-600">Portfolio Archive</p>

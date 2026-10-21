@@ -16,7 +16,7 @@ export default function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className="bg-pine-950 text-[11px] font-semibold uppercase tracking-wider text-mist-300">
-        <div className="mx-auto flex h-10 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-16">
+        <div className="mx-auto flex h-10 max-w-7xl items-center justify-between px-5 sm:px-6 lg:px-8">
           <div className="flex items-center gap-6">
             <a href={SITE.phoneHref} className="flex items-center gap-1.5 hover:text-gold-300">
               <Phone size={13} className="text-gold-300" /> {SITE.phone}
@@ -35,7 +35,7 @@ export default function Header() {
       </div>
 
       <div className="border-b border-cream-100/10 bg-pine-800 shadow-[0_1px_8px_rgba(0,0,0,0.18)]">
-        <div className="mx-auto flex h-[72px] max-w-[1440px] items-center justify-between gap-6 px-5 md:px-10 lg:px-16">
+        <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-6 lg:px-8">
           <Link href="/" aria-label="ALIF Engineering & Construction — Home">
             <Logo />
           </Link>

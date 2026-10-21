@@ -40,6 +40,8 @@
 }
 
 html { scroll-behavior: smooth; }
+html, body { overflow-x: clip; }
+img, video { max-width: 100%; }
 body { background: var(--color-cream-50); color: var(--color-ink-900); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; line-height: 1.65; letter-spacing: 0.005em; }
 ::selection { background: var(--color-gold-500); color: var(--color-pine-950); }
 

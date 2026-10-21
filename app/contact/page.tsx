@@ -35,7 +35,7 @@ export default function ContactPage() {
           <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Headquarters &amp; Regional Offices — Pakistan</p>
           <div className="mt-5 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
             <div>
-              <h1 className="anim-fade-up anim-delay-1 font-display text-5xl leading-[1.05] text-ink">
+              <h1 className="anim-fade-up anim-delay-1 font-display text-4xl leading-[1.12] sm:text-5xl sm:leading-[1.05] text-ink">
                 Initiate a Project <em className="text-gold-dark not-italic underline decoration-gold/50 underline-offset-8">Tendering</em> Inquiry or Direct Consultation.
               </h1>
               <p className="anim-fade-up anim-delay-2 mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">

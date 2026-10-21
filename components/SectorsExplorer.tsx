@@ -160,7 +160,7 @@ export default function SectorsExplorer() {
                     </Link>
                   </div>
                 </div>
-                <div className={`relative min-h-[300px] ${flip ? "lg:order-1" : ""}`}>
+                <div className={`relative min-h-[460px] sm:min-h-[380px] lg:min-h-0 ${flip ? "lg:order-1" : ""}`}>
                   <Image src={s.image} alt={d.heading} width={1000} height={800} className="absolute inset-0 h-full w-full object-cover" />
                   <span className="absolute top-4 left-4 rounded-md bg-ink/85 px-3 py-1.5 text-[10.5px] font-bold tracking-wider text-gold-light uppercase backdrop-blur">{d.caption}</span>
                   {d.extras && (

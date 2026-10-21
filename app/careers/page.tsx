@@ -39,7 +39,7 @@ export default function CareersPage() {
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
               <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Talent Acquisition &amp; Engineering Cadre</p>
-              <h1 className="anim-fade-up anim-delay-1 mt-5 font-display text-5xl leading-[1.05] text-white">
+              <h1 className="anim-fade-up anim-delay-1 mt-5 font-display text-4xl leading-[1.12] sm:text-5xl sm:leading-[1.05] text-white">
                 Build Your Engineering Legacy with Pakistan&apos;s Preeminent Contractor.
               </h1>
               <p className="anim-fade-up anim-delay-2 mt-5 max-w-2xl text-[15px] leading-relaxed text-mist">

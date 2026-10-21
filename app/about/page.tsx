@@ -61,7 +61,7 @@ export default function AboutPage() {
             <span className="h-px w-8 bg-gold" /> Established Heritage &amp; Engineering Distinction
           </p>
           <div className="mt-5 grid gap-8 lg:grid-cols-[1.4fr_1fr] lg:items-end">
-            <h1 className="font-display text-5xl leading-[1.02] text-ink sm:text-6xl">
+            <h1 className="font-display text-4xl leading-[1.1] text-ink sm:text-6xl">
               Shaping the Architectural<br />Destiny of Pakistan.
             </h1>
             <p className="max-w-md text-[15px] leading-relaxed text-muted lg:justify-self-end">

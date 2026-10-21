@@ -8,7 +8,7 @@ export function SectionHeading({
   return (
     <div className={`reveal ${center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}`}>
       <p className={`eyebrow ${dark ? "text-gold-400" : "text-gold-600"}`}>{eyebrow}</p>
-      <h2 className={`mt-3 font-display text-3xl leading-tight sm:text-4xl ${dark ? "text-cream-100" : "text-pine-800"}`}>
+      <h2 className={`mt-3 font-display text-4xl leading-tight ${dark ? "text-cream-100" : "text-pine-800"}`}>
         {title}
       </h2>
       {text && (
@@ -23,7 +23,7 @@ export function PageHero({
 }: { eyebrow: string; title: string; text?: string }) {
   return (
     <section className="bg-pine-900 pb-14 pt-[150px] sm:pb-16">
-      <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="eyebrow anim-fade-up text-gold-400">{eyebrow}</p>
         <h1 className="anim-fade-up anim-delay-1 mt-4 max-w-3xl font-display text-4xl leading-tight text-cream-100 sm:text-5xl">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-[15px] leading-7 text-mist-300">{text}</p>}
@@ -98,18 +98,20 @@ export function ProjectCard({ project, dark = true }: { project: Project; dark?:
 
 export function CtaBand() {
   return (
-    <section className="bg-pine-800">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-6 px-5 py-14 md:px-10 lg:flex-row lg:items-center lg:px-16">
-        <div>
-          <p className="eyebrow text-gold-400">Ready to Build?</p>
-          <h2 className="mt-3 font-display text-3xl text-cream-100 sm:text-4xl">Have a project in mind?</h2>
-          <p className="mt-3 max-w-xl text-[15px] leading-7 text-mist-300">
-            Schedule a confidential consultation with our structural directors and chief estimating engineers.
-          </p>
+    <section className="bg-cream-50">
+      <div className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="reveal flex flex-col items-start justify-between gap-6 rounded-card bg-pine px-6 py-10 sm:px-10 lg:flex-row lg:items-center">
+          <div>
+            <p className="text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Ready to Build?</p>
+            <h2 className="mt-3 font-display text-3xl leading-tight text-white sm:text-4xl">Have a project in mind?</h2>
+            <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-mist">
+              Schedule a confidential consultation with our structural directors and chief estimating engineers.
+            </p>
+          </div>
+          <Link href="/contact#enquiry" className="inline-flex shrink-0 items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light">
+            Get a Project Estimate <ArrowRight size={16} />
+          </Link>
         </div>
-        <Link href="/contact#enquiry" className="btn-gold shrink-0">
-          Get a Project Estimate <ArrowRight size={16} />
-        </Link>
       </div>
     </section>
   );

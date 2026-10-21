@@ -66,7 +66,7 @@ export default function AchievementsPage() {
           <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Record &amp; Pedigree</p>
           <div className="mt-5 grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
             <div>
-              <h1 className="anim-fade-up anim-delay-1 font-display text-5xl leading-[1.05] text-ink">
+              <h1 className="anim-fade-up anim-delay-1 font-display text-4xl leading-[1.12] sm:text-5xl sm:leading-[1.05] text-ink">
                 A Legacy of <em className="text-gold-dark not-italic underline decoration-gold/50 underline-offset-8">Structural Distinction</em> &amp; Zero-Harm Precision.
               </h1>
               <p className="anim-fade-up anim-delay-2 mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">
@@ -226,15 +226,15 @@ export default function AchievementsPage() {
               </div>
               <div className="grid grid-cols-3 gap-4 text-center lg:text-left">
                 <div>
-                  <p className="font-display text-3xl text-gold-light sm:text-4xl"><CountUp value={8200} suffix="m³" /></p>
+                  <p className="font-display text-[22px] text-gold-light sm:text-4xl"><CountUp value={8200} suffix="m³" /></p>
                   <p className="mt-1 text-[10.5px] font-bold tracking-wider text-mist uppercase">Single Raft Volume</p>
                 </div>
                 <div>
-                  <p className="font-display text-3xl text-gold-light sm:text-4xl"><CountUp value={38} suffix=" Hrs" /></p>
+                  <p className="font-display text-[22px] text-gold-light sm:text-4xl"><CountUp value={38} suffix=" Hrs" /></p>
                   <p className="mt-1 text-[10.5px] font-bold tracking-wider text-mist uppercase">Non-Stop Operation</p>
                 </div>
                 <div>
-                  <p className="font-display text-3xl text-gold-light sm:text-4xl"><CountUp value={0} decimals={1} /></p>
+                  <p className="font-display text-[22px] text-gold-light sm:text-4xl"><CountUp value={0} decimals={1} /></p>
                   <p className="mt-1 text-[10.5px] font-bold tracking-wider text-mist uppercase">Cold Joints — Integrity Assured</p>
                 </div>
               </div>

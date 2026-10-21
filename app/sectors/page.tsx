@@ -43,7 +43,7 @@ export default function SectorsPage() {
           <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr] lg:items-center">
             <div>
               <p className="anim-fade-up text-[11px] font-bold tracking-[0.22em] text-gold-light uppercase">Specialized Divisions • Domestic &amp; Industrial Horizons</p>
-              <h1 className="anim-fade-up anim-delay-1 mt-5 font-display text-5xl leading-[1.05] text-white">
+              <h1 className="anim-fade-up anim-delay-1 mt-5 font-display text-4xl leading-[1.12] sm:text-5xl sm:leading-[1.05] text-white">
                 Multi-Disciplinary Contracting Across Pakistan&apos;s Vital Sectors.
               </h1>
               <p className="anim-fade-up anim-delay-2 mt-5 max-w-2xl text-[15px] leading-relaxed text-mist">
