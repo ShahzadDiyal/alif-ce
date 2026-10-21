@@ -629,3 +629,21 @@ export const OFFICES = [
   { label: "Islamabad Regional Office", address: "Executive Heights, Blue Area, Islamabad, Pakistan" },
   { label: "Karachi Liaison Office", address: "Ocean Mall Tower, Block 9, Clifton, Karachi, Pakistan" },
 ];
+
+export const SECTOR_PROJECTS: Record<string, string[]> = {
+  "high-rise-buildings": ["alif-horizon-commercial-tower", "grand-crest-luxury-residences", "pearl-financial-center"],
+  "commercial-complexes": ["alif-horizon-commercial-tower", "pearl-financial-center"],
+  "residential-communities": ["grand-crest-luxury-residences"],
+  "hospitals-pharmaceuticals": ["institute-of-medical-sciences"],
+  "academic-buildings": ["faculty-of-advanced-engineering-campus"],
+  "industrial-power": ["national-logistics-park"],
+  "piling-shoring-dewatering": ["alif-horizon-commercial-tower", "grand-crest-luxury-residences"],
+  "infrastructure-civil-works": ["chenab-river-viaduct"],
+};
+
+export function projectsForSector(slug: string): Project[] {
+  const slugs = SECTOR_PROJECTS[slug] ?? [];
+  return slugs
+    .map((s) => PROJECTS.find((p) => p.slug === s))
+    .filter((p): p is Project => Boolean(p));
+}

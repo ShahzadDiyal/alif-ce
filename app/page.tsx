@@ -6,6 +6,7 @@ import {
 import { CtaBand, ProjectCard, SectionHeading, SectorCard } from "@/components/Sections";
 import EnquiryForm from "@/components/EnquiryForm";
 import { IMAGES, OFFICES, PROCESS_STEPS, PROJECTS, SECTORS, SITE, STATS } from "@/lib/data";
+import CountUp from "@/components/CountUp";
 
 export default function HomePage() {
   return (
@@ -13,14 +14,14 @@ export default function HomePage() {
       {/* HERO */}
       <section className="relative overflow-hidden bg-pine-900 pt-[112px]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={IMAGES.hero} alt="High-rise construction site" className="absolute inset-0 h-full w-full object-cover opacity-30" />
+        <img src={IMAGES.hero} alt="High-rise construction site" className="hero-zoom absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-r from-pine-900 via-pine-900/85 to-pine-900/30" />
         <div className="relative mx-auto grid max-w-[1440px] gap-10 px-5 pb-16 pt-14 md:px-10 lg:grid-cols-[1.15fr_.85fr] lg:items-end lg:px-16 lg:pb-20 lg:pt-20">
           <div>
-            <p className="eyebrow flex items-center gap-2 text-gold-400">
+            <p className="eyebrow anim-fade-up flex items-center gap-2 text-gold-400">
               <Building2 size={14} /> Engineering &amp; Construction — Pakistan
             </p>
-            <h1 className="mt-5 font-display text-[42px] leading-[1.05] text-cream-100 sm:text-6xl lg:text-7xl">
+            <h1 className="anim-fade-up anim-delay-1 mt-5 font-display text-[42px] leading-[1.05] text-cream-100 sm:text-6xl lg:text-7xl">
               Building a Better<br />Tomorrow
             </h1>
             <p className="mt-5 max-w-xl text-[15px] leading-7 text-mist-300 sm:text-base">
@@ -51,7 +52,7 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-[1440px] grid-cols-2 px-5 md:px-10 lg:grid-cols-4 lg:px-16">
           {STATS.map((s, i) => (
             <div key={s.label} className={`py-8 text-center ${i > 0 ? "border-l border-cream-400" : ""} ${i >= 2 ? "max-lg:border-t max-lg:border-cream-400" : ""} ${i === 2 ? "max-lg:border-l-0" : ""}`}>
-              <div className="font-display text-4xl text-pine-800 sm:text-5xl">{s.value}</div>
+              <div className="font-display text-4xl text-pine-800 sm:text-5xl"><CountUp value={parseInt(s.value)} /></div>
               <div className="mt-2 px-2 text-[10px] font-bold uppercase tracking-[0.16em] text-ink-500">{s.label}</div>
             </div>
           ))}

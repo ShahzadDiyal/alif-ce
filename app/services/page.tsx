@@ -110,7 +110,7 @@ export default function ServicesPage() {
           </div>
           <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((s) => (
-              <article key={s.slug} className="flex flex-col overflow-hidden rounded-card border border-line bg-white">
+              <article key={s.slug} className="reveal lift flex flex-col overflow-hidden rounded-card border border-line bg-white">
                 <div className="relative">
                   <Image src={s.image} alt={s.title} width={800} height={420} className="h-44 w-full object-cover" />
                   <span className="absolute bottom-3 left-4 rounded-md bg-ink/85 px-2.5 py-1 text-[10.5px] font-bold tracking-wider text-gold-light uppercase">Pillar {s.pillar}</span>
@@ -145,7 +145,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {PHASES.map((p) => (
-              <div key={p.n} className="rounded-card border border-white/10 bg-pine-deep p-6">
+              <div key={p.n} className="reveal rounded-card border border-white/10 bg-pine-deep p-6">
                 <p className="font-display text-4xl text-gold">{p.n}</p>
                 <h3 className="mt-3 font-display text-lg leading-snug text-white">{p.title}</h3>
                 <p className="mt-2 text-[13px] leading-relaxed text-mist">{p.text}</p>
@@ -180,7 +180,7 @@ export default function ServicesPage() {
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {FLEET.map((f) => (
-              <article key={f.title} className="overflow-hidden rounded-card border border-line bg-white">
+              <article key={f.title} className="reveal lift overflow-hidden rounded-card border border-line bg-white">
                 <Image src={f.img} alt={f.title} width={600} height={380} className="h-32 w-full object-cover" />
                 <div className="p-4">
                   <p className="text-[10.5px] font-bold tracking-wider text-gold-dark uppercase">{f.tag}</p>

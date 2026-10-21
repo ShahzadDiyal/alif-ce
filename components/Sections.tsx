@@ -6,7 +6,7 @@ export function SectionHeading({
   eyebrow, title, dark = false, center = false, text,
 }: { eyebrow: string; title: string; dark?: boolean; center?: boolean; text?: string }) {
   return (
-    <div className={center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}>
+    <div className={`reveal ${center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"}`}>
       <p className={`eyebrow ${dark ? "text-gold-400" : "text-gold-600"}`}>{eyebrow}</p>
       <h2 className={`mt-3 font-display text-3xl leading-tight sm:text-4xl ${dark ? "text-cream-100" : "text-pine-800"}`}>
         {title}
@@ -24,8 +24,8 @@ export function PageHero({
   return (
     <section className="bg-pine-900 pb-14 pt-[150px] sm:pb-16">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
-        <p className="eyebrow text-gold-400">{eyebrow}</p>
-        <h1 className="mt-4 max-w-3xl font-display text-4xl leading-tight text-cream-100 sm:text-5xl">{title}</h1>
+        <p className="eyebrow anim-fade-up text-gold-400">{eyebrow}</p>
+        <h1 className="anim-fade-up anim-delay-1 mt-4 max-w-3xl font-display text-4xl leading-tight text-cream-100 sm:text-5xl">{title}</h1>
         {text && <p className="mt-5 max-w-2xl text-[15px] leading-7 text-mist-300">{text}</p>}
         <div className="gold-rule mt-8 max-w-md !bg-none" style={{ background: "linear-gradient(90deg,#C6A15B,transparent)" }} />
       </div>
@@ -35,7 +35,7 @@ export function PageHero({
 
 export function SectorCard({ sector }: { sector: Sector }) {
   return (
-    <article className="card group overflow-hidden">
+    <article className="card reveal lift group overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={sector.image} alt={sector.title} loading="lazy" className="h-40 w-full object-cover" />
       <div className="p-5">
@@ -51,7 +51,7 @@ export function SectorCard({ sector }: { sector: Sector }) {
 
 export function ServiceCard({ service }: { service: Service }) {
   return (
-    <article className="card group overflow-hidden">
+    <article className="card reveal lift group overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src={service.image} alt={service.title} loading="lazy" className="h-40 w-full object-cover" />
       <div className="p-5">
@@ -67,7 +67,7 @@ export function ServiceCard({ service }: { service: Service }) {
 
 export function ProjectCard({ project, dark = true }: { project: Project; dark?: boolean }) {
   return (
-    <article className={`${dark ? "card-dark" : "card"} group overflow-hidden`}>
+    <article className={`${dark ? "card-dark" : "card"} reveal lift group overflow-hidden`}>
       <div className="relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={project.image} alt={project.title} loading="lazy" className="h-48 w-full object-cover" />

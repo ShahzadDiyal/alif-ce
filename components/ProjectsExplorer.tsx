@@ -9,7 +9,7 @@ const REGIONS = ["All Regions", "Lahore", "Karachi", "Islamabad", "Punjab"];
 
 function ArchiveCard({ project }: { project: Project }) {
   return (
-    <article className="card group flex flex-col overflow-hidden">
+    <article className="card anim-fade-up group flex flex-col overflow-hidden">
       <div className="relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={project.image} alt={project.title} loading="lazy" className="h-44 w-full object-cover" />
@@ -130,7 +130,7 @@ export default function ProjectsExplorer() {
                 PEC No-Limit CA Classified
               </span>
             </div>
-            <article className="card mt-8 overflow-hidden lg:grid lg:grid-cols-2">
+            <article className="card anim-fade-up mt-8 overflow-hidden lg:grid lg:grid-cols-2">
               <div className="relative min-h-[280px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={featured.image} alt={featured.title} className="absolute inset-0 h-full w-full object-cover" />

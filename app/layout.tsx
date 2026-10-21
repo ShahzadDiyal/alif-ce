@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Playfair_Display } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ScrollReveal from "@/components/ScrollReveal";
 import { SITE } from "@/lib/data";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
         <Header />
         <main>{children}</main>
+        <ScrollReveal />
         <Footer />
       </body>
     </html>

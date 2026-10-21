@@ -6,6 +6,7 @@ import {
   HardHat, Landmark, Leaf, Ruler, ShieldCheck, Sparkle, Truck,
 } from "lucide-react";
 import { IMAGES, SITE } from "@/lib/data";
+import CountUp from "@/components/CountUp";
 
 export const metadata: Metadata = {
   title: "About ALIF — Shaping the Architectural Destiny of Pakistan",
@@ -77,7 +78,7 @@ export default function AboutPage() {
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {HERITAGE.map((s) => (
               <div key={s.label} className="border-t-2 border-gold/60 pt-4">
-                <p className="font-display text-4xl text-ink">{s.value}</p>
+                <p className="font-display text-4xl text-ink">{s.value === "38+" ? <CountUp value={38} suffix="+" /> : s.value === "24.5M" ? <CountUp value={24.5} decimals={1} suffix="M" /> : s.value === "100%" ? <CountUp value={100} suffix="%" /> : s.value}</p>
                 <p className="mt-1 text-[11px] font-bold tracking-[0.18em] text-gold-dark uppercase">{s.label}</p>
                 <p className="mt-2 text-[13px] leading-relaxed text-muted">{s.text}</p>
               </div>
@@ -170,7 +171,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-10 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-4">
             {LEADERS.map((l) => (
-              <article key={l.name} className="overflow-hidden rounded-card border border-line bg-white">
+              <article key={l.name} className="reveal lift overflow-hidden rounded-card border border-line bg-white">
                 <div className="relative">
                   <Image src={l.img} alt={l.name} width={600} height={520} className="h-56 w-full object-cover" />
                   <span className="absolute top-3 left-3 rounded-md bg-ink/85 px-2.5 py-1 text-[10.5px] font-bold tracking-wider text-gold-light uppercase">{l.badge}</span>
@@ -200,7 +201,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-10 grid gap-5 text-left sm:grid-cols-2 lg:grid-cols-3">
             {CREDENTIALS.map((c) => (
-              <div key={c.title} className="rounded-card border border-white/10 bg-pine-deep p-6">
+              <div key={c.title} className="reveal lift rounded-card border border-white/10 bg-pine-deep p-6">
                 <div className="flex items-center justify-between">
                   <c.icon className="h-6 w-6 text-gold" />
                   <span className="rounded-md bg-gold/15 px-2 py-1 text-[10.5px] font-bold tracking-wider text-gold-light uppercase">{c.tag}</span>
@@ -229,7 +230,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {FLEET.map((f) => (
-              <div key={f.unit} className="rounded-card border border-line bg-cream p-6">
+              <div key={f.unit} className="reveal lift rounded-card border border-line bg-cream p-6">
                 <p className="font-display text-5xl text-ink">{f.value} <span className="text-lg text-gold-dark">{f.unit}</span></p>
                 <p className="mt-3 text-[13.5px] leading-relaxed text-muted">{f.text}</p>
                 <p className="mt-4 flex items-center gap-1.5 text-[11px] font-bold tracking-wider text-gold-dark uppercase">
