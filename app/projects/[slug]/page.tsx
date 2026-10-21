@@ -41,7 +41,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
   return (
     <>
       {/* HERO — cream, editorial (per design) */}
-      <section className="bg-cream-100 pb-12 pt-[136px]">
+      <section className="bg-cream-100 pb-12 pt-10">
         <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
           <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-[12.5px] font-semibold text-ink-500">
             <Link href="/projects" className="inline-flex items-center gap-1.5 text-gold-700 hover:text-gold-600">

@@ -22,7 +22,7 @@ export function PageHero({
   eyebrow, title, text,
 }: { eyebrow: string; title: string; text?: string }) {
   return (
-    <section className="bg-pine-900 pb-14 pt-[150px] sm:pb-16">
+    <section className="bg-pine-900 pb-14 pt-14 sm:pb-16">
       <div className="mx-auto max-w-[1440px] px-5 md:px-10 lg:px-16">
         <p className="eyebrow anim-fade-up text-gold-400">{eyebrow}</p>
         <h1 className="anim-fade-up anim-delay-1 mt-4 max-w-3xl font-display text-4xl leading-tight text-cream-100 sm:text-5xl">{title}</h1>

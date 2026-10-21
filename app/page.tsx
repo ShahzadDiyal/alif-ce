@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden bg-pine-900 pt-[112px]">
+      <section className="relative overflow-hidden bg-pine-900">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={IMAGES.hero} alt="High-rise construction site" className="hero-zoom absolute inset-0 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-r from-pine-900 via-pine-900/85 to-pine-900/30" />
