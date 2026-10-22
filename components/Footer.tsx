@@ -14,7 +14,7 @@ export default function Footer() {
             Delivering structural permanence and landmark commercial projects across the nation.
           </p>
           <p className="mt-4 text-[11px] font-bold tracking-[0.22em] text-gold-400">QUALITY ENGINEERING. LASTING SPACES.</p>
-          <p className="mt-4 inline-flex items-center gap-2 rounded-lg border border-gold-500/30 bg-gold-500/10 px-3 py-1.5 text-[11px] font-bold tracking-wider text-gold-300">
+          <p className="mt-4 inline-flex items-center gap-2 rounded-lg bg-gold-500/10 px-3 py-1.5 text-[11px] font-bold tracking-wider text-gold-300">
             <BadgeCheck size={14} /> PEC Registered — CA No Limit
           </p>
         </div>

@@ -50,8 +50,8 @@ export default async function SectorDetailPage({ params }: { params: Promise<{ s
           </nav>
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.5fr_1fr]">
             <div>
-              <p className="anim-fade-up inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/10 px-3.5 py-1.5 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">
-                <BadgeCheck className="h-4 w-4" /> Sector Specialization • {projects.length} Portfolio Project{projects.length === 1 ? "" : "s"}
+              <p className="anim-fade-up inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">
+                Sector Specialization • {projects.length} Portfolio Project{projects.length === 1 ? "" : "s"}
               </p>
               <h1 className="anim-fade-up anim-delay-1 mt-5 font-display text-4xl leading-[1.08] text-ink sm:text-5xl">{sector.title}</h1>
               <p className="anim-fade-up anim-delay-2 mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">{sector.description}</p>

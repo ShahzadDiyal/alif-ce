@@ -68,7 +68,7 @@ export default function ApplicationForm() {
         Submit your curriculum vitae, project portfolio plate, and PEC credentials directly to our Executive Engineering
         Review Board. All dossiers are reviewed under strict professional confidentiality.
       </p>
-      <div className="mt-6 grid gap-6 sm:grid-cols-2">
+      <div className="mt-6 grid gap-6 max-sm:grid-cols-1 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="af-name">Full Legal Name *</label>
           <input id="af-name" name="name" required className={inputCls} />

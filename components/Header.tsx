@@ -28,14 +28,14 @@ export default function Header() {
               <MapPin size={13} className="text-gold-300" /> Lahore, Pakistan
             </span>
           </div>
-          <span className="hidden rounded border border-gold-300/30 bg-gold-500/15 px-2.5 py-0.5 text-[10px] font-bold tracking-widest text-gold-300 md:block">
+          <span className="hidden rounded px-2.5 py-0.5 text-[10px] font-bold tracking-widest text-gold-300 md:block">
             PEC Registered (No-Limit CA Category)
           </span>
         </div>
       </div>
 
       <div className="border-b border-cream-100/10 bg-pine-800 shadow-[0_1px_8px_rgba(0,0,0,0.18)]">
-        <div className="mx-auto flex h-[72px] w-full items-center justify-between gap-6 px-5 sm:px-6 lg:px-12">
+        <div className="mx-auto flex h-[72px] w-full items-center justify-between gap-6 max-sm:gap-2 px-5 max-[359px]:px-4 sm:px-6 lg:px-12">
           <Link href="/" aria-label="ALIF Engineering & Construction — Home">
             <Logo />
           </Link>
@@ -52,7 +52,7 @@ export default function Header() {
               </Link>
             ))}
           </nav>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 max-sm:gap-2">
             <Link href="/contact#enquiry" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-btn bg-gold px-3 py-2 text-[12px] font-bold whitespace-nowrap text-ink transition-colors hover:bg-gold-light sm:px-5 sm:py-2.5 sm:text-[13px]">
               Get a Quote
             </Link>

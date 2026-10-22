@@ -90,7 +90,7 @@ export default function TenderForm() {
     <form onSubmit={handleSubmit} className="rounded-card border border-line bg-white p-7 sm:p-8">
       <h3 className="font-display text-2xl text-ink">Submit Tender / RFP Package</h3>
       <p className="mt-1.5 text-[13px] text-muted">Please provide your organization&apos;s credentials and key project parameters to initiate estimating analysis.</p>
-      <div className="mt-6 grid gap-6 sm:grid-cols-2">
+      <div className="mt-6 grid gap-6 max-sm:grid-cols-1 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="tf-name">Full Name &amp; Designation *</label>
           <input id="tf-name" name="name" required className={inputCls} />
@@ -153,9 +153,12 @@ export default function TenderForm() {
         </span>
       </label>
       <div className="mt-6 flex flex-wrap items-center gap-4">
-        <button type="submit" className="inline-flex items-center gap-2 rounded-btn bg-gold px-6 py-3.5 text-sm font-bold text-ink hover:bg-gold-light">
-          <BadgeCheck className="h-4 w-4" /> Submit Formal Tendering Inquiry <Send className="h-4 w-4" />
-        </button>
+       <button
+  type="submit"
+  className="inline-flex items-center gap-2 rounded-btn bg-gold px-6 py-3.5 text-sm font-bold text-ink hover:bg-gold-light max-md:w-full max-md:justify-center max-md:text-center"
+>
+  Submit Formal Tendering Inquiry <Send className="h-4 w-4" />
+</button>
         <span className="flex items-center gap-1.5 text-[12px] text-muted"><Lock className="h-3.5 w-3.5" /> Encrypted 256-Bit SSL Transmission</span>
       </div>
     </form>

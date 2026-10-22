@@ -68,10 +68,12 @@ export default function CareersExplorer() {
               <h3 className="mt-2.5 font-display text-[22px] leading-snug text-ink">{j.title}</h3>
               <p className="mt-2 max-w-3xl text-[13.5px] leading-relaxed text-muted">{j.text}</p>
             </div>
-            <button onClick={() => applyForRole(j.title)}
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-btn bg-ink px-5 py-3 text-[13px] font-bold text-white hover:bg-pine">
-              Apply For Role <ArrowUpRight className="h-4 w-4" />
-            </button>
+           <button
+  onClick={() => applyForRole(j.title)}
+  className="inline-flex shrink-0 items-center gap-1.5 rounded-btn bg-ink px-5 py-3 text-[13px] font-bold text-white hover:bg-pine max-md:w-full max-md:justify-center max-md:text-center"
+>
+  Apply For Role <ArrowUpRight className="h-4 w-4" />
+</button>
           </article>
         ))}
         {shown.length === 0 && <p className="rounded-card border border-line bg-white p-7 text-sm text-muted">No open requisitions in this discipline right now — submit a general dossier below.</p>}

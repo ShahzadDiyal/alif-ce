@@ -56,7 +56,7 @@ export default function ProposalForm({ serviceTitle }: { serviceTitle: string })
 
   return (
     <form onSubmit={handleSubmit} className="rounded-card border border-line bg-white p-7 sm:p-8">
-      <div className="grid gap-6 sm:grid-cols-2">
+      <div className="grid gap-6 max-sm:grid-cols-1 sm:grid-cols-2">
         <div>
           <label className={labelCls} htmlFor="pf-project">Project Name / Working Title *</label>
           <input id="pf-project" name="project" required placeholder="e.g. Alif Horizon Landmark Towers" className={inputCls} />
@@ -119,8 +119,8 @@ export default function ProposalForm({ serviceTitle }: { serviceTitle: string })
         <input type="checkbox" name="nda" className="mt-0.5 h-4 w-4 accent-[#0F3D36]" />
         We require ALIF Engineering to sign a mutual Non-Disclosure Agreement (NDA)
       </label>
-      <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-btn bg-gold px-6 py-3.5 text-sm font-bold text-ink hover:bg-gold-light sm:w-auto">
-        <BadgeCheck className="h-4 w-4" /> Submit RFP for Engineering Assessment <Send className="h-4 w-4" />
+      <button type="submit" className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-btn bg-gold px-3 md:px-6 py-3.5 text-sm font-bold text-ink hover:bg-gold-light sm:w-auto">
+        Submit RFP for Eng Assessment <Send className="h-4 w-4" />
       </button>
     </form>
   );

@@ -12,7 +12,7 @@ function ArchiveCard({ project }: { project: Project }) {
     <article className="card anim-fade-up group flex flex-col overflow-hidden">
       <div className="relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={project.image} alt={project.title} loading="lazy" className="h-44 w-full object-cover" />
+        <img src={project.image} alt={project.title} loading="lazy" className="h-44 md:h-80 w-full object-cover" />
         <span className={`absolute left-4 top-4 rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest ${
           project.status === "Completed" ? "bg-gold-500 text-pine-950" : "bg-pine-950/85 text-gold-300"
         }`}>

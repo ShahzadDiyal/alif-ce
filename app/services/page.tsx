@@ -62,14 +62,20 @@ export default function ServicesPage() {
                 <span key={c} className="rounded-full border border-line bg-white px-3.5 py-1.5 text-[12px] font-semibold text-ink">{c}</span>
               ))}
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#pillars" className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light">
-                Explore Engineering Disciplines <ArrowDown className="h-4 w-4" />
-              </a>
-              <Link href="/contact" className="inline-flex items-center gap-2 rounded-btn border border-ink/20 px-5 py-3 text-sm font-bold text-ink hover:bg-white">
-                Pre-Qualification Dossier <Download className="h-4 w-4" />
-              </Link>
-            </div>
+           <div className="mt-8 flex flex-wrap gap-3">
+  <a
+    href="#pillars"
+    className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light max-md:w-full max-md:justify-center max-md:text-center"
+  >
+    Explore Engineering Disciplines <ArrowDown className="h-4 w-4" />
+  </a>
+  <Link
+    href="/contact"
+    className="inline-flex items-center gap-2 rounded-btn border border-ink/20 px-5 py-3 text-sm font-bold text-ink hover:bg-white max-md:w-full max-md:justify-center max-md:text-center"
+  >
+    Pre-Qualification Dossier <Download className="h-4 w-4" />
+  </Link>
+</div>
           </div>
           <div className="overflow-hidden rounded-card bg-pine text-cream shadow-sm">
             <div className="relative">
@@ -112,7 +118,7 @@ export default function ServicesPage() {
             {SERVICES.map((s) => (
               <article key={s.slug} className="reveal lift flex flex-col overflow-hidden rounded-card border border-line bg-white">
                 <div className="relative">
-                  <Image src={s.image} alt={s.title} width={800} height={420} className="h-44 w-full object-cover" />
+                  <Image src={s.image} alt={s.title} width={800} height={420} className="h-44 md:h-80 w-full object-cover" />
                   <span className="absolute bottom-3 left-4 rounded-md bg-ink/85 px-2.5 py-1 text-[10.5px] font-bold tracking-wider text-gold-light uppercase">Pillar {s.pillar}</span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
@@ -178,10 +184,10 @@ export default function ServicesPage() {
               Complete self-reliance without third-party machinery bottlenecks. Our dedicated equipment depots guarantee immediate deployment across Pakistan.
             </p>
           </div>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
             {FLEET.map((f) => (
               <article key={f.title} className="reveal lift overflow-hidden rounded-card border border-line bg-white">
-                <Image src={f.img} alt={f.title} width={600} height={380} className="h-32 w-full object-cover" />
+                <Image src={f.img} alt={f.title} width={600} height={380} className="h-44 md:h-80 w-full object-cover" />
                 <div className="p-4">
                   <p className="text-[10.5px] font-bold tracking-wider text-gold-dark uppercase">{f.tag}</p>
                   <h3 className="mt-1 font-display text-[16px] leading-snug text-ink">{f.title}</h3>

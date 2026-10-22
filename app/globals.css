@@ -23,8 +23,9 @@
   --color-mist-300: #a8b8b2;
   --color-navy: #1e3a5f;
   --color-navy-deep: #152c49;
-  --font-display: var(--font-playfair), Georgia, serif;
-  --font-sans: var(--font-manrope), ui-sans-system, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
   /* Semantic aliases used across the design-system pages */
   --color-pine: #0F3D36;
   --color-pine-deep: #0C332C;
@@ -45,11 +46,13 @@ html { scroll-behavior: smooth; }
 html, body { overflow-x: clip; }
 img, video { max-width: 100%; }
 body { background: var(--color-cream-50); color: var(--color-ink-900); font-family: var(--font-sans); -webkit-font-smoothing: antialiased; line-height: 1.65; letter-spacing: 0.005em; }
+input, textarea, select, button { font-family: inherit; }
+.font-mono { font-variant-numeric: tabular-nums; }
 ::selection { background: var(--color-gold-500); color: var(--color-pine-950); }
 
 .eyebrow { font-size: 11px; letter-spacing: .22em; font-weight: 700; text-transform: uppercase; }
 .card { border: 1px solid var(--color-cream-400); border-radius: 12px; background: #fff; }
-.card-dark { border: 1px solid rgba(245,240,230,.14); border-radius: 12px; background: var(--color-pine-700); }
+.card-dark { border-radius: 12px; background: var(--color-pine-700); }
 .btn-gold { display:inline-flex; align-items:center; gap:.5rem; background:var(--color-gold-500); color:var(--color-pine-950); font-weight:700; font-size:.875rem; padding:.8rem 1.4rem; border-radius:12px; transition:.2s; }
 .btn-gold:hover { background: var(--color-gold-400); }
 .btn-outline-light { display:inline-flex; align-items:center; gap:.5rem; border:1px solid rgba(245,240,230,.7); color:var(--color-cream-100); font-weight:600; font-size:.875rem; padding:.8rem 1.4rem; border-radius:12px; transition:.2s; }
@@ -102,4 +105,12 @@ main { animation: fadeIn .6s ease both; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   .hero-zoom, .marquee-track, .anim-fade-up, .anim-fade-in, .live-dot, main { animation: none; }
+}
+
+/* Very small phones (<360px): keep large display headings inside the viewport */
+@media (max-width: 359.98px) {
+  .font-display.text-4xl:not([class*="max-sm:text-"]) { font-size: 1.95rem; }
+  .font-display.text-5xl:not([class*="max-sm:text-"]) { font-size: 2.35rem; }
+  .font-display.text-6xl:not([class*="max-sm:text-"]) { font-size: 2.6rem; }
+  h1, h2, h3 { overflow-wrap: break-word; }
 }

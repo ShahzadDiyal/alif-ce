@@ -625,10 +625,10 @@ export const PROCESS_STEPS = [
 ];
 
 export const OFFICES = [
-  { label: "Lahore Central", tag: "Principal Headquarters", address: "Alif Tower, Main Boulevard, Gulberg III, Lahore, Punjab", phone: "+92 42 3578 9000", email: "lahore@alifconstruction.pk", person: "Engr. Tariq Masood, PE", role: "Director Pre-Construction" },
-  { label: "Islamabad & KPK", tag: "Federal Directorate", address: "Executive Heights, Sector G-8/4, Blue Area Axis, Islamabad", phone: "+92 51 2890 120", email: "islamabad@alifconstruction.pk", person: "Engr. Salman Shah, M.Eng", role: "Regional VP Federal Tenders" },
-  { label: "Karachi & Sindh", tag: "Maritime & Coastal Division", address: "Ocean View Tower, Block 9, Clifton Coast, Karachi, Sindh", phone: "+92 21 3584 7600", email: "karachi@alifconstruction.pk", person: "Farooq Zubair, MS Structural", role: "Chief Resident Engineer Sindh" },
-  { label: "Plant & Depots", tag: "Logistics & Fleet", address: "Manga Mandi Heavy Base, Lahore \u2022 Port Qasim Depot, Karachi", phone: "+92 42 3591 4410", email: "plant@alifconstruction.pk", person: "Brig. (R) Asim Jahangir", role: "Director Heavy Machinery Fleet" },
+  { label: "Lahore Central", tag: "Principal Headquarters", address: "Alif Tower, Main Boulevard, Gulberg III, Lahore, Punjab", phone: "+92 42 3578 9000", email: "lahore@alifconstruction.pk", person: "Engr. Tariq Masood, PE", role: "Director Pre-Construction", lat: 31.5120, lng: 74.3440, mapQuery: "Main Boulevard, Gulberg III, Lahore" },
+  { label: "Islamabad & KPK", tag: "Federal Directorate", address: "Executive Heights, Sector G-8/4, Blue Area Axis, Islamabad", phone: "+92 51 2890 120", email: "islamabad@alifconstruction.pk", person: "Engr. Salman Shah, M.Eng", role: "Regional VP Federal Tenders", lat: 33.6950, lng: 73.0460, mapQuery: "Sector G-8/4, Islamabad" },
+  { label: "Karachi & Sindh", tag: "Maritime & Coastal Division", address: "Ocean View Tower, Block 9, Clifton Coast, Karachi, Sindh", phone: "+92 21 3584 7600", email: "karachi@alifconstruction.pk", person: "Farooq Zubair, MS Structural", role: "Chief Resident Engineer Sindh", lat: 24.8205, lng: 67.0290, mapQuery: "Block 9, Clifton, Karachi" },
+  { label: "Plant & Depots", tag: "Logistics & Fleet", address: "Manga Mandi Heavy Base, Lahore \u2022 Port Qasim Depot, Karachi", phone: "+92 42 3591 4410", email: "plant@alifconstruction.pk", person: "Brig. (R) Asim Jahangir", role: "Director Heavy Machinery Fleet", lat: 31.3240, lng: 74.0570, mapQuery: "Manga Mandi, Lahore" },
 ];
 
 export const SECTOR_PROJECTS: Record<string, string[]> = {

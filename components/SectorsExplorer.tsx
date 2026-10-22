@@ -114,10 +114,10 @@ export default function SectorsExplorer() {
   return (
     <div>
       <div className="flex flex-wrap items-center gap-2">
-        <span className="text-[12px] font-bold tracking-wider text-muted uppercase">Filter Sectors:</span>
+        <span className="text-[12px] font-bold tracking-wider text-muted uppercase max-md:mb-1 max-md:w-full">Filter Sectors:</span>
         {FILTERS.map((f) => (
           <button key={f.group} onClick={() => setActive(f.group)}
-            className={`rounded-full px-4 py-2 text-[12.5px] font-bold transition ${active === f.group ? "bg-gold text-ink" : "border border-white/25 text-white hover:border-gold"}`}>
+            className={`rounded-full px-4 py-2 text-[12.5px] font-bold transition max-md:px-3.5 max-md:py-1.5 max-md:text-[12px] ${active === f.group ? "bg-gold text-ink" : "border border-white/25 text-white hover:border-gold"}`}>
             {f.label}
           </button>
         ))}
@@ -126,7 +126,7 @@ export default function SectorsExplorer() {
         </span>
       </div>
 
-      <div className="mt-10 space-y-8">
+      <div className="mt-10 space-y-8 max-md:mt-7 max-md:space-y-6">
         {shown.map((s, idx) => {
           const d = DESIGN[s.slug];
           if (!d) return null;
@@ -134,10 +134,10 @@ export default function SectorsExplorer() {
           return (
             <article key={s.slug} className="anim-fade-up overflow-hidden rounded-card bg-white text-ink shadow-sm">
               <div className={`grid lg:grid-cols-2 ${flip ? "" : ""}`}>
-                <div className={`p-7 sm:p-9 ${flip ? "lg:order-2" : ""}`}>
+                <div className={`p-7 max-sm:p-5 sm:p-9 ${flip ? "lg:order-2" : ""}`}>
                   <p className="text-[11px] font-bold tracking-[0.2em] text-gold-dark uppercase">{d.division}</p>
-                  <h3 className="mt-2.5 font-display text-[28px] leading-tight text-ink">{d.heading}</h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-muted">{d.text}</p>
+                  <h3 className="mt-2.5 font-display text-[28px] leading-tight text-ink max-sm:text-[23px]">{d.heading}</h3>
+                  <p className="mt-3 text-[14px] leading-relaxed text-muted max-sm:text-[13.5px]">{d.text}</p>
                   <ul className="mt-5 space-y-2.5">
                     {d.bullets.map((b) => (
                       <li key={b} className="flex gap-2 text-[13.5px] font-medium leading-relaxed text-ink/85">
@@ -147,24 +147,24 @@ export default function SectorsExplorer() {
                   </ul>
                   <div className="mt-6 grid grid-cols-3 divide-x divide-line border-y border-line py-4 text-center">
                     {d.metrics.map(([label, value]) => (
-                      <div key={label} className="px-2">
-                        <p className="text-[10.5px] font-bold tracking-wider text-muted uppercase">{label}</p>
-                        <p className="mt-1 font-display text-xl text-ink sm:text-2xl">{value}</p>
+                      <div key={label} className="px-2 max-sm:px-1">
+                        <p className="text-[10.5px] font-bold tracking-wider text-muted uppercase max-sm:text-[9px] max-sm:tracking-normal max-sm:break-words">{label}</p>
+                        <p className="mt-1 font-display text-xl text-ink max-sm:text-[15px] max-sm:leading-snug max-sm:break-words sm:text-2xl">{value}</p>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-5 flex flex-wrap items-center gap-4">
+                  <div className="mt-5 flex flex-wrap items-center gap-4 max-md:flex-col max-md:items-stretch max-md:gap-3">
                     <p className="text-[11.5px] font-bold tracking-wide text-gold-dark uppercase">{d.statutory}</p>
-                    <Link href={`/sectors/${s.slug}`} className="ml-auto inline-flex items-center gap-1.5 rounded-btn bg-ink px-4 py-2.5 text-[12.5px] font-bold text-white hover:bg-pine">
+                    <Link href={`/sectors/${s.slug}`} className="ml-auto inline-flex items-center gap-1.5 rounded-btn bg-ink px-4 py-2.5 max-md:ml-0 max-md:w-full max-md:justify-center max-md:py-3 text-[12.5px] font-bold text-white hover:bg-pine">
                       View Folio <ArrowRight className="h-4 w-4" />
                     </Link>
                   </div>
                 </div>
-                <div className={`relative min-h-[460px] sm:min-h-[380px] lg:min-h-0 ${flip ? "lg:order-1" : ""}`}>
-                  <Image src={s.image} alt={d.heading} width={1000} height={800} className="absolute inset-0 h-full w-full object-cover" />
+                <div className={`relative min-h-[460px] sm:min-h-[380px] lg:min-h-0 max-md:min-h-0 ${flip ? "lg:order-1" : ""}`}>
+                  <Image src={s.image} alt={d.heading} width={1000} height={800} className="absolute inset-0 h-full w-full object-cover max-md:relative max-md:h-60 sm:max-md:h-80" />
                   <span className="absolute top-4 left-4 rounded-md bg-ink/85 px-3 py-1.5 text-[10.5px] font-bold tracking-wider text-gold-light uppercase backdrop-blur">{d.caption}</span>
                   {d.extras && (
-                    <div className="absolute inset-x-4 bottom-4 grid gap-3 sm:grid-cols-2">
+                    <div className="absolute inset-x-4 bottom-4 grid gap-3 sm:grid-cols-2 max-md:static max-md:bg-ink max-md:p-4">
                       {d.extras.map(([h, t]) => (
                         <div key={h} className="rounded-card bg-ink/85 p-4 backdrop-blur">
                           <h4 className="text-[12.5px] font-bold text-gold-light">{h}</h4>

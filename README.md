@@ -2,7 +2,7 @@
 
 Next.js 15 (App Router) + Tailwind CSS v4 + Lucide React. All pages are static (SSG).
 
-**Brand:** Deep green `#0E2F29` / `#0A2420`, cream `#F5F0E6`, gold `#C6A15B` — from the ALIF logo (1A light / 1B dark). Headings: Playfair Display, body: Manrope. Cards/buttons: 12px radius.
+**Brand:** Deep green `#0E2F29` / `#0A2420`, cream `#F5F0E6`, gold `#C6A15B` — from the ALIF logo (1A light / 1B dark). Font: Poppins (headings and body). Cards/buttons: 12px radius.
 
 ## Run
 

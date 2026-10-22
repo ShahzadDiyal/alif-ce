@@ -54,7 +54,7 @@ export default function ContactPage() {
             </div>
           </div>
           <div className="reveal relative mt-9 overflow-hidden rounded-card">
-            <Image src={IMAGES.facade} alt="ALIF Corporate Central Tower, Gulberg III Lahore" width={1600} height={640} priority className="hero-zoom h-[280px] w-full object-cover sm:h-[340px]" />
+            <Image src={IMAGES.facade} alt="ALIF Corporate Central Tower, Gulberg III Lahore" width={1600} height={640} priority className="hero-zoom h-[280px] w-full object-cover sm:h-[540px]" />
             <div className="absolute inset-x-0 bottom-0 flex flex-wrap items-end justify-between gap-3 bg-gradient-to-t from-ink/85 to-transparent p-5 pt-16">
               <div>
                 <p className="text-[10.5px] font-bold tracking-[0.2em] text-gold-light uppercase">Tendering Nexus</p>
@@ -86,8 +86,23 @@ export default function ContactPage() {
               <article key={o.label} className={`reveal reveal-d${i + 1} lift flex flex-col rounded-card border border-line bg-white p-5`}>
                 <p className="text-[10.5px] font-bold tracking-[0.16em] text-gold-dark uppercase">{o.tag}</p>
                 <h3 className="mt-1.5 font-display text-xl text-ink">{o.label}</h3>
-                <div className="relative mt-4 flex h-24 items-center justify-center overflow-hidden rounded-[10px] bg-pine/5" style={{ backgroundImage: "linear-gradient(#0F3D3612 1px, transparent 1px), linear-gradient(90deg, #0F3D3612 1px, transparent 1px)", backgroundSize: "18px 18px" }}>
-                  <MapPin className="h-7 w-7 text-gold-dark" />
+                <div className="relative mt-4 h-44 overflow-hidden rounded-[10px] border border-line bg-pine/5">
+                  <iframe
+                    title={`Map — ${o.label}`}
+                    src={`https://maps.google.com/maps?q=${o.lat},${o.lng}&z=15&hl=en&output=embed`}
+                    className="absolute inset-0 h-full w-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                  <a
+                    href={`https://www.google.com/maps/search/?api=1&query=${o.lat},${o.lng}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute right-2 bottom-2 flex items-center gap-1 rounded-md bg-white/95 px-2 py-1 text-[10.5px] font-bold tracking-wider text-ink uppercase shadow-sm hover:text-gold-dark"
+                  >
+                    <MapPin className="h-3 w-3 text-gold-dark" /> Directions
+                  </a>
                 </div>
                 <p className="mt-4 text-[13px] leading-relaxed text-muted">{o.address}</p>
                 <div className="mt-3 space-y-1.5 text-[13px] font-semibold text-ink">
@@ -106,7 +121,7 @@ export default function ContactPage() {
 
       {/* Guidelines + form */}
       <section id="enquiry" className="bg-cream">
-        <div className="mx-auto grid w-full gap-10 px-4 sm:px-6 lg:px-12 py-24 lg:grid-cols-[1fr_1.35fr]">
+        <div className="mx-auto grid w-full gap-10 px-4 sm:px-6 lg:px-12 py-24 max-md:grid-cols-1 max-md:py-16 lg:grid-cols-[1fr_1.35fr]">
           <div className="reveal">
             <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Formal RFP Protocol</p>
             <h2 className="mt-3 font-display text-4xl leading-tight text-ink">Institutional Tendering Guidelines</h2>

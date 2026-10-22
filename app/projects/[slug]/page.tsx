@@ -74,8 +74,18 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
           <div className="mt-5 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
             <p className="max-w-2xl text-[15px] leading-7 text-ink-600">{project.overview}</p>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact#enquiry" className="btn-gold"><FileText size={15} /> Download Technical Dossier</Link>
-              <Link href="/contact#enquiry" className="btn-dark"><Mail size={15} /> Enquire About Similar Scale</Link>
+            <Link
+  href="/contact#enquiry"
+  className="btn-gold max-md:w-full max-md:justify-center max-md:text-center"
+>
+  <FileText size={15} /> Download Technical Dossier
+</Link>
+<Link
+  href="/contact#enquiry"
+  className="btn-dark max-md:w-full max-md:justify-center max-md:text-center"
+>
+  <Mail size={15} /> Enquire About Similar Scale
+</Link>
             </div>
           </div>
 
@@ -94,9 +104,9 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
           <dl className="mt-6 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-cream-400 bg-cream-400 lg:grid-cols-6">
             {statCells.map((s) => (
-              <div key={s.label} className="bg-white px-4 py-4">
+              <div key={s.label} className="bg-white px-4 py-4 max-md:last:odd:col-span-2">
                 <dt className="text-[10px] font-bold uppercase tracking-widest text-ink-500">{s.label}</dt>
-                <dd className="mt-1.5 font-display text-[22px] leading-none text-pine-800">{s.value}</dd>
+                <dd className="mt-1.5 font-display text-[22px] leading-none text-pine-800 max-md:break-words max-sm:text-[16px] max-sm:leading-snug">{s.value}</dd>
                 <dd className="mt-1 text-[11px] font-semibold text-ink-500">{s.sub}</dd>
               </div>
             ))}
@@ -195,7 +205,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                 {cs.phases.map((ph) => (
                   <article key={ph.title} className="card overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={ph.image} alt={ph.title} loading="lazy" className="h-44 w-full object-cover" />
+                    <img src={ph.image} alt={ph.title} loading="lazy" className="h-44 md:h-80 w-full object-cover" />
                     <div className="p-5">
                       <p className="eyebrow !text-[10px] text-gold-600">{ph.phase}</p>
                       <p className="mt-1 text-[12px] font-bold text-ink-500">{ph.meta}</p>
@@ -295,7 +305,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             {others.map((p) => (
               <article key={p.slug} className="card group overflow-hidden sm:grid sm:grid-cols-[220px_1fr]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.image} alt={p.title} loading="lazy" className="h-44 w-full object-cover sm:h-full" />
+                <img src={p.image} alt={p.title} loading="lazy" className="h-44 md:h-80 w-full object-cover sm:h-full" />
                 <div className="p-5">
                   <p className="eyebrow !text-[10px] text-gold-600">{p.category} · {p.location}</p>
                   <h3 className="mt-2 font-display text-xl leading-snug text-pine-800">
@@ -313,30 +323,40 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="bg-pine-800">
-        <div className="mx-auto w-full px-4 py-14 text-center sm:px-6 lg:px-12">
-          <p className="eyebrow text-gold-400">Institutional General Contracting</p>
-          <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl text-cream-100 sm:text-4xl">
-            Planning a {project.category} Landmark in Pakistan?
-          </h2>
-          <p className="mx-auto mt-3 max-w-xl text-[15px] leading-7 text-mist-300">
-            Engage ALIF&apos;s pre-construction advisory team for geotechnical risk modeling, value-engineered
-            structural solutions, and PEC Category CA turnkey EPC delivery.
-          </p>
-          <div className="mt-7 flex flex-wrap justify-center gap-3">
-            <Link href="/contact" className="btn-gold"><CalendarDays size={15} /> Schedule Technical Consultation</Link>
-            <Link href="/contact#enquiry" className="btn-outline-light"><FileText size={15} /> Download Full Project Dossier (PDF)</Link>
-          </div>
-          <div className="mt-7 flex flex-wrap justify-center gap-x-7 gap-y-2 text-[13px] font-semibold text-cream-100">
-            {["Turnkey Design-Build & EPC", "No-Limit PEC CA Category", "BIM Level 2 Coordination"].map((t) => (
-              <span key={t} className="inline-flex items-center gap-2">
-                <CheckCircle2 size={15} className="text-gold-400" /> {t}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+     {/* CTA */}
+<section className="bg-pine-800">
+  <div className="mx-auto w-full px-4 py-14 text-center max-md:py-12 max-md:text-left sm:px-6 lg:px-12">
+    <p className="eyebrow text-gold-400">Institutional General Contracting</p>
+    <h2 className="mx-auto mt-3 max-w-2xl font-display text-3xl text-cream-100 max-md:mx-0 sm:text-4xl">
+      Planning a {project.category} Landmark in Pakistan?
+    </h2>
+    <p className="mx-auto mt-3 max-w-xl text-[15px] leading-7 text-mist-300 max-md:mx-0">
+      Engage ALIF&apos;s pre-construction advisory team for geotechnical risk modeling, value-engineered
+      structural solutions, and PEC Category CA turnkey EPC delivery.
+    </p>
+    <div className="mt-7 flex flex-wrap justify-center gap-3 max-md:flex-col">
+      <Link
+        href="/contact"
+        className="btn-gold max-md:w-full max-md:justify-center max-md:text-center"
+      >
+        <CalendarDays size={15} /> Schedule Technical Consultation
+      </Link>
+      <Link
+        href="/contact#enquiry"
+        className="btn-outline-light max-md:w-full max-md:justify-center max-md:text-center"
+      >
+        <FileText size={15} /> Download Full Project Dossier (PDF)
+      </Link>
+    </div>
+    <div className="mt-7 flex flex-wrap justify-center gap-x-7 gap-y-2 text-[13px] font-semibold text-cream-100 max-md:flex-col max-md:items-start max-md:gap-y-3">
+      {["Turnkey Design-Build & EPC", "No-Limit PEC CA Category", "BIM Level 2 Coordination"].map((t) => (
+        <span key={t} className="inline-flex items-center gap-2">
+          <CheckCircle2 size={15} className="shrink-0 text-gold-400" /> {t}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
     </>
   );
 }

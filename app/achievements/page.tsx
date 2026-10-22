@@ -86,22 +86,22 @@ export default function AchievementsPage() {
           </div>
           <div className="anim-fade-up anim-delay-3 mt-10 grid grid-cols-2 gap-6 border-t border-line pt-8 lg:grid-cols-4">
             <div>
-              <p className="font-display text-5xl text-ink"><CountUp value={1.85} decimals={2} suffix="M+" /></p>
+              <p className="font-display text-5xl text-ink max-sm:text-[2rem]"><CountUp value={1.85} decimals={2} suffix="M+" /></p>
               <p className="mt-1 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">Safe Man-Hours</p>
               <p className="mt-1 text-[12px] text-muted">Consecutive zero Lost-Time Injury (LTI) verified across metro sites.</p>
             </div>
             <div>
-              <p className="font-display text-5xl text-ink"><CountUp value={100} suffix="%" /></p>
+              <p className="font-display text-5xl text-ink max-sm:text-[2rem]"><CountUp value={100} suffix="%" /></p>
               <p className="mt-1 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">QA/QC Pass Rate</p>
               <p className="mt-1 text-[12px] text-muted">Independent batch testing confirmed by UET Lahore &amp; NESPAK.</p>
             </div>
             <div>
-              <p className="font-display text-5xl text-ink">CA</p>
+              <p className="font-display text-5xl text-ink max-sm:text-[2rem]">CA</p>
               <p className="mt-1 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">No-Limit License</p>
               <p className="mt-1 text-[12px] text-muted">Statutory Category CA certification for mega-tier infrastructure.</p>
             </div>
             <div>
-              <p className="font-display text-5xl text-ink"><CountUp value={38} suffix="+" /></p>
+              <p className="font-display text-5xl text-ink max-sm:text-[2rem]"><CountUp value={38} suffix="+" /></p>
               <p className="mt-1 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">Years Continuous</p>
               <p className="mt-1 text-[12px] text-muted">Turnkey EPC execution with institutional public and private developers.</p>
             </div>
@@ -267,7 +267,7 @@ export default function AchievementsPage() {
           </div>
 
           <p className="reveal mt-16 text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Institutional Honors</p>
-          <h2 className="reveal mt-3 font-display text-4xl text-ink">Industry Commendations &amp; Medals</h2>
+          <h2 className="reveal mt-3 font-display text-4xl text-ink max-sm:text-3xl">Industry Commendations &amp; Medals</h2>
           <p className="reveal mt-3 max-w-2xl text-[14.5px] leading-relaxed text-muted">
             Conferred by national engineering congresses, prime developer consortiums, and academia for groundbreaking concrete technology and safety performance.
           </p>
@@ -304,12 +304,18 @@ export default function AchievementsPage() {
               </ul>
             </div>
             <div className="flex flex-col gap-3 lg:items-end">
-              <Link href="/contact#enquiry" className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light">
-                <Download className="h-4 w-4" /> Download Audit Dossier
-              </Link>
-              <a href={`mailto:${SITE.tenderEmail}`} className="inline-flex items-center gap-2 rounded-btn border border-white/30 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">
-                <Mail className="h-4 w-4" /> Inquire with Tendering Desk
-              </a>
+             <Link
+  href="/contact#enquiry"
+  className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light max-md:w-full max-md:justify-center max-md:text-center"
+>
+  <Download className="h-4 w-4" /> Download Audit Dossier
+</Link>
+<a
+  href={`mailto:${SITE.tenderEmail}`}
+  className="inline-flex items-center gap-2 rounded-btn border border-white/30 px-5 py-3 text-sm font-bold text-white hover:bg-white/10 max-md:w-full max-md:justify-center max-md:text-center"
+>
+  <Mail className="h-4 w-4" /> Inquire with Tendering Desk
+</a>
               <Link href="/projects" className="inline-flex items-center gap-1.5 text-[12.5px] font-bold text-gold-light hover:text-white">
                 See the portfolio behind the record <ArrowRight className="h-4 w-4" />
               </Link>

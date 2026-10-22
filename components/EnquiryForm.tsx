@@ -23,7 +23,7 @@ export default function EnquiryForm({ compact = false }: { compact?: boolean }) 
   return (
     <form onSubmit={submit} className="card p-7 sm:p-7" id="enquiry-form">
       <h3 className="font-display text-xl text-pine-800">Project Tendering &amp; Enquiry</h3>
-      <div className={`mt-5 grid gap-4 ${compact ? "" : "sm:grid-cols-2"}`}>
+      <div className={`mt-5 grid gap-4 ${compact ? "max-md:grid-cols-1" : "max-sm:grid-cols-1 sm:grid-cols-2"}`}>
         <label className="block text-[13px] font-semibold text-ink-900">
           Full Name *
           <input required className="field mt-1.5" value={form.name} onChange={set("name")} placeholder="Your name" />

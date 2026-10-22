@@ -70,7 +70,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative mt-10 overflow-hidden rounded-card">
-            <Image src={IMAGES.night} alt="ALIF tower under construction at night" width={1600} height={700} priority className="h-[340px] w-full object-cover sm:h-[420px]" />
+            <Image src={IMAGES.night} alt="ALIF tower under construction at night" width={1600} height={700} priority className="h-[340px] w-full object-cover md:h-[620px]" />
             <span className="absolute top-4 left-4 rounded-md bg-ink/80 px-3 py-1.5 text-[11px] font-bold tracking-widest text-gold-light uppercase backdrop-blur">
               Engineering Archive • Folio 01
             </span>
@@ -173,7 +173,7 @@ export default function AboutPage() {
             {LEADERS.map((l) => (
               <article key={l.name} className="reveal lift overflow-hidden rounded-card border border-line bg-white">
                 <div className="relative">
-                  <Image src={l.img} alt={l.name} width={600} height={520} className="h-56 w-full object-cover" />
+                  <Image src={l.img} alt={l.name} width={600} height={520} className="h-56 md:h-80 w-full object-cover" />
                   <span className="absolute top-3 left-3 rounded-md bg-ink/85 px-2.5 py-1 text-[10.5px] font-bold tracking-wider text-gold-light uppercase">{l.badge}</span>
                 </div>
                 <div className="p-5">

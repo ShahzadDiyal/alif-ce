@@ -37,15 +37,15 @@ export default function ProjectsPage() {
             A curated chronicle of complex high-rise towers, specialized healthcare facilities, industrial hubs,
             and national infrastructure delivered with uncompromising technical precision.
           </p>
-          <div className="mt-10 grid max-w-3xl grid-cols-3 gap-6 border-t border-cream-100/15 pt-8">
+          <div className="mt-10 grid max-w-3xl grid-cols-3 gap-6 max-sm:gap-3 border-t border-cream-100/15 pt-8">
             {[
               { v: String(PORTFOLIO_COUNTS.total), u: "", label: "Structures", sub: "Landmark Mega-Structures Executed" },
               { v: String(PORTFOLIO_COUNTS.completed), u: "", label: "Completed", sub: "Delivered & Handed Over" },
               { v: String(PORTFOLIO_COUNTS.ongoing), u: "", label: "Ongoing", sub: "Currently Under Execution" },
             ].map((s) => (
               <div key={s.label}>
-                <div className="font-display text-4xl text-cream-100 sm:text-5xl">
-                  {s.v}<span className="ml-1.5 align-middle font-sans text-[11px] font-bold uppercase tracking-widest text-gold-400">{s.label}</span>
+                <div className="font-display text-4xl text-cream-100 max-sm:text-3xl sm:text-5xl">
+                  {s.v}<span className="ml-1.5 align-middle font-sans text-[11px] font-bold uppercase tracking-widest text-gold-400 max-sm:mt-1 max-sm:ml-0 max-sm:block max-sm:text-[10px] max-sm:tracking-wider">{s.label}</span>
                 </div>
                 <p className="mt-1.5 text-[11px] font-semibold uppercase tracking-wider text-mist-300">{s.sub}</p>
               </div>
@@ -88,8 +88,20 @@ export default function ProjectsPage() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Link href="/contact#enquiry" className="btn-gold">Request Tendering Dossier</Link>
-              <Link href="/contact" className="btn-outline-light">Speak with Chief Estimator <ArrowRight size={15} /></Link>
+            <div className="flex flex-wrap gap-3">
+  <Link
+    href="/contact#enquiry"
+    className="btn-gold max-md:w-full max-md:justify-center max-md:text-center"
+  >
+    Request Tendering Dossier
+  </Link>
+  <Link
+    href="/contact"
+    className="btn-outline-light max-md:w-full max-md:justify-center max-md:text-center"
+  >
+    Speak with Chief Estimator <ArrowRight size={15} />
+  </Link>
+</div>
             </div>
           </div>
         </div>

@@ -51,14 +51,7 @@ export default function SectorsPage() {
                 With our PEC Category CA (No-Limit) licensing, ALIF delivers integrated Turnkey EPC services backed by
                 four decades of geotechnical mastery and structural rigour.
               </p>
-              <div className="anim-fade-up anim-delay-3 mt-6 flex flex-wrap gap-2.5">
-                <span className="flex items-center gap-1.5 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1.5 text-[12px] font-bold text-gold-light">
-                  <BadgeCheck className="h-4 w-4" /> 8 Specialized Divisions
-                </span>
-                <span className="flex items-center gap-1.5 rounded-full border border-white/20 px-3.5 py-1.5 text-[12px] font-bold text-white">
-                  <Landmark className="h-4 w-4 text-gold" /> PEC No-Limit CA Category
-                </span>
-              </div>
+             
             </div>
             <div className="anim-fade-up anim-delay-2 relative hidden overflow-hidden rounded-card lg:block">
               <Image src={IMAGES.tower} alt="Gulberg Twin Tower Axis flagship commission" width={900} height={620} priority className="hero-zoom h-64 w-full object-cover" />

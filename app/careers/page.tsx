@@ -47,12 +47,18 @@ export default function CareersPage() {
                 revere structural rigor, algorithmic accuracy, and uncompromised physical science.
               </p>
               <div className="anim-fade-up anim-delay-3 mt-7 flex flex-wrap gap-3">
-                <a href="#vacancies" className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light">
-                  Explore Open Vacancies <ArrowDown className="h-4 w-4" />
-                </a>
-                <a href="#mte" className="inline-flex items-center gap-2 rounded-btn border border-white/30 px-5 py-3 text-sm font-bold text-white hover:bg-white/10">
-                  Graduate Cadre Cohort <ArrowRight className="h-4 w-4" />
-                </a>
+               <a
+  href="#vacancies"
+  className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light max-md:w-full max-md:justify-center max-md:text-center"
+>
+  Explore Open Vacancies <ArrowDown className="h-4 w-4" />
+</a>
+<a
+  href="#mte"
+  className="inline-flex items-center gap-2 rounded-btn border border-white/30 px-5 py-3 text-sm font-bold text-white hover:bg-white/10 max-md:w-full max-md:justify-center max-md:text-center"
+>
+  Graduate Cadre Cohort <ArrowRight className="h-4 w-4" />
+</a>
               </div>
             </div>
             <div className="anim-fade-up anim-delay-2 relative hidden overflow-hidden rounded-card lg:block">

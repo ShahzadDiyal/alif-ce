@@ -30,12 +30,12 @@ export default function HomePage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link href="/contact#enquiry" className="btn-gold max-sm:justify-center">Start Your Project <ArrowRight size={16} /></Link>
-              <Link href="/projects" className="btn-outline-light">View Our Projects</Link>
+              <Link href="/projects" className="btn-outline-light max-sm:justify-center">View Our Projects</Link>
             </div>
           </div>
           <div className="card-dark hidden p-4 lg:block">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={IMAGES.tower} alt="Precision high-rise construction" className="h-44 w-full rounded-lg object-cover" />
+            <img src={IMAGES.tower} alt="Precision high-rise construction" className="h-80 w-full rounded-lg object-cover" />
             <div className="flex items-center justify-between px-1 pb-1 pt-3">
               <div>
                 <p className="text-[10px] font-bold uppercase tracking-widest text-gold-400">Field Execution</p>
@@ -64,7 +64,7 @@ export default function HomePage() {
         <div className="mx-auto grid w-full items-center gap-10 px-5 py-24 sm:px-6 lg:grid-cols-2 lg:px-12 lg:py-20">
           <div className="relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={IMAGES.building} alt="Modern building engineered by ALIF" loading="lazy" className="h-[320px] w-full rounded-xl object-cover sm:h-[400px]" />
+            <img src={IMAGES.building} alt="Modern building engineered by ALIF" loading="lazy" className="h-[320px] w-full rounded-xl object-cover md:h-[500px]" />
             <div className="absolute bottom-4 left-4 flex items-center gap-3 rounded-xl bg-pine-900/95 px-4 py-3 text-cream-100">
               <Award className="text-gold-400" size={22} />
               <div>

@@ -73,20 +73,28 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           </nav>
           <div className="mt-8 grid gap-10 lg:grid-cols-[1.5fr_1fr]">
             <div>
-              <p className="inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold/10 px-3.5 py-1.5 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">
-                <BadgeCheck className="h-4 w-4" /> PEC Category CA Registered — Unlimited Financial Ceiling
+              <p className="inline-flex items-center gap-2 rounded-full px-3.5 py-1.5 text-[11px] font-bold tracking-[0.16em] text-gold-dark uppercase">
+                PEC Category CA Registered — Unlimited Financial Ceiling
               </p>
               <h1 className="mt-5 font-display text-4xl leading-[1.08] text-ink sm:text-5xl">
                 {service.slug === "turnkey-epc-general-contracting" ? "Turnkey EPC & Institutional General Contracting" : service.title}
               </h1>
               <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">{service.description}</p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <a href="#proposal" className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light">
-                  <FileText className="h-4 w-4" /> Request Technical Proposal
-                </a>
-                <a href="#matrices" className="inline-flex items-center gap-2 rounded-btn border border-ink/20 px-5 py-3 text-sm font-bold text-ink hover:bg-white">
-                  <Download className="h-4 w-4" /> Download Service Spec Sheet (PDF)
-                </a>
+               <div className="mt-7 flex flex-wrap gap-3">
+  <a
+    href="#proposal"
+    className="inline-flex items-center gap-2 rounded-btn bg-gold px-5 py-3 text-sm font-bold text-ink hover:bg-gold-light max-md:w-full max-md:justify-center max-md:text-center"
+  >
+    <FileText className="h-4 w-4" /> Request Technical Proposal
+  </a>
+  <a
+    href="#matrices"
+    className="inline-flex items-center gap-2 rounded-btn border border-ink/20 px-5 py-3 text-sm font-bold text-ink hover:bg-white max-md:w-full max-md:justify-center max-md:text-center"
+  >
+    <Download className="h-4 w-4" /> Download Service Spec Sheet (PDF)
+  </a>
+</div>
               </div>
             </div>
             <aside className="h-fit rounded-card border border-line bg-white p-7">
@@ -184,7 +192,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             {milestones.map((m) => (
               <Link key={m.slug} href={`/projects/${m.slug}`} className="group overflow-hidden rounded-card border border-line bg-white">
                 <div className="relative overflow-hidden">
-                  <Image src={m.img} alt={m.title} width={800} height={460} className="h-48 w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <Image src={m.img} alt={m.title} width={800} height={460} className="h-48 md:h-90 w-full object-cover transition duration-500 group-hover:scale-105" />
                   <span className="absolute top-3 left-3 rounded-md bg-gold px-2.5 py-1 text-[10.5px] font-bold tracking-wider text-ink uppercase">{m.tag}</span>
                 </div>
                 <div className="p-5">

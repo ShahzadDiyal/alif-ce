@@ -37,7 +37,7 @@ export function SectorCard({ sector }: { sector: Sector }) {
   return (
     <article className="card reveal lift group overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={sector.image} alt={sector.title} loading="lazy" className="h-40 w-full object-cover" />
+      <img src={sector.image} alt={sector.title} loading="lazy" className="h-40 md:h-80 w-full object-cover" />
       <div className="p-6">
         <h3 className="font-display text-lg text-pine-800">{sector.title}</h3>
         <p className="mt-2 text-sm leading-6 text-ink-500">{sector.short}</p>
@@ -53,7 +53,7 @@ export function ServiceCard({ service }: { service: Service }) {
   return (
     <article className="card reveal lift group overflow-hidden">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={service.image} alt={service.title} loading="lazy" className="h-40 w-full object-cover" />
+      <img src={service.image} alt={service.title} loading="lazy" className="h-40 md:h-80 w-full object-cover" />
       <div className="p-6">
         <h3 className="font-display text-lg text-pine-800">{service.title}</h3>
         <p className="mt-2 text-sm leading-6 text-ink-500">{service.short}</p>
@@ -70,7 +70,7 @@ export function ProjectCard({ project, dark = true }: { project: Project; dark?:
     <article className={`${dark ? "card-dark" : "card"} reveal lift group overflow-hidden`}>
       <div className="relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={project.image} alt={project.title} loading="lazy" className="h-48 w-full object-cover" />
+        <img src={project.image} alt={project.title} loading="lazy" className="h-48 md:h-80 w-full object-cover" />
         <span className={`absolute left-4 top-4 rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest ${
           project.status === "Completed" ? "bg-gold-500 text-pine-950" : "bg-pine-950/85 text-gold-300"
         }`}>
