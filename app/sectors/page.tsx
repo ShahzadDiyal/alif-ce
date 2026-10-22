@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -7,12 +8,12 @@ import {
 import SectorsExplorer from "@/components/SectorsExplorer";
 import { IMAGES, SITE } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Sectors — Multi-Disciplinary Contracting Across Pakistan's Vital Sectors | ALIF",
+export const metadata: Metadata = pageMeta({
+  title: "Sectors — Multi-Disciplinary Contracting Across Pakistan's Vital Sectors",
   description:
     "Eight specialized ALIF divisions: high-rise towers, commercial plazas, residential enclaves, healthcare & cleanrooms, academic campuses, heavy industrial, deep geotechnics, and infrastructure & heavy civil works.",
-  alternates: { canonical: "/sectors" },
-};
+  path: "/sectors",
+});
 
 const MATRIX: [string, string, string, string, string][] = [
   ["High-Rise Skyscraper Towers", "LOD 400 (Fabrication Ready)", "ACI 318-19 / UBC 97 Zone 4", "High (Climbing MEP, BMS)", "LDA / CDA / Civil Aviation"],

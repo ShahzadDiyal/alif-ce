@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,12 +10,12 @@ import CareersExplorer from "@/components/CareersExplorer";
 import CountUp from "@/components/CountUp";
 import { IMAGES } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Careers — Build Your Engineering Legacy | ALIF Engineering & Construction",
+export const metadata: Metadata = pageMeta({
+  title: "Careers — Build Your Engineering Legacy",
   description:
     "Open engineering requisitions at ALIF: senior resident engineers, geotechnical, MEP commissioning, project controls and HSE roles, plus the 24-month Management Trainee Engineer (MTE) cadre program.",
-  alternates: { canonical: "/careers" },
-};
+  path: "/careers",
+});
 
 const WHY = [
   { icon: Building2, tag: "Unprecedented Magnitude", title: "Mega-Scale Structural Exposure", text: "Manage 35-storey reinforced post-tensioned superstructures, 40-meter diaphragm walls, and monumental civic infrastructure across Karachi, Lahore, and Islamabad." },

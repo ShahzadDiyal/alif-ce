@@ -29,8 +29,14 @@ export const metadata: Metadata = {
     title: "ALIF Engineering & Construction — Building a Better Tomorrow",
     description: "Pakistan's general contracting firm for high-rise, commercial, healthcare, industrial and infrastructure construction.",
     locale: "en_PK",
+    url: "/",
   },
-  robots: { index: true, follow: true },
+  twitter: {
+    card: "summary_large_image",
+    title: "ALIF Engineering & Construction — Building a Better Tomorrow",
+    description: "Pakistan's general contracting firm for high-rise, commercial, healthcare, industrial and infrastructure construction.",
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
 };
 
 const orgJsonLd = {

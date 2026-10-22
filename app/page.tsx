@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Link from "next/link";
 import {
   ArrowRight, Award, BadgeCheck, Building2, CheckCircle2, Clock3, DraftingCompass,
@@ -7,6 +9,14 @@ import { CtaBand, ProjectCard, SectionHeading, SectorCard } from "@/components/S
 import EnquiryForm from "@/components/EnquiryForm";
 import { IMAGES, OFFICES, PROCESS_STEPS, PROJECTS, SECTORS, SITE, STATS } from "@/lib/data";
 import CountUp from "@/components/CountUp";
+
+export const metadata: Metadata = pageMeta({
+  title: "ALIF Engineering & Construction — Building a Better Tomorrow",
+  description:
+    "Pakistan general contractor (PEC Category CA, no limit) delivering high-rise towers, commercial complexes, hospitals, industrial plants and infrastructure with in-house engineering, MEP and QA/QC.",
+  path: "/",
+  absolute: true,
+});
 
 export default function HomePage() {
   return (

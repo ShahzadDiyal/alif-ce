@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -18,11 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const s = SERVICES.find((x) => x.slug === slug);
   if (!s) return {};
-  return {
-    title: `${s.title} | ALIF Engineering & Construction`,
+  return pageMeta({
+    title: s.title,
     description: s.description,
-    alternates: { canonical: `/services/${s.slug}` },
-  };
+    path: `/services/${s.slug}`,
+    images: [s.image],
+  });
 }
 
 function milestonesFor() {

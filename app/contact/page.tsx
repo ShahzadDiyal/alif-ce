@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import {
   BadgeCheck, Bolt, Clock3, FileSignature, Landmark, Mail, MapPin, Phone, ShieldCheck, Siren,
@@ -6,12 +7,12 @@ import {
 import TenderForm from "@/components/TenderForm";
 import { IMAGES, OFFICES, SITE } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Contact — Initiate a Project Tendering Inquiry | ALIF Engineering & Construction",
+export const metadata: Metadata = pageMeta({
+  title: "Contact — Initiate a Project Tendering Inquiry",
   description:
     "Engage ALIF's principal estimating engineers for institutional EPC bidding, joint ventures and mega-scale turnkey contracts. Regional offices in Lahore, Islamabad and Karachi — +92 42 3578 9000.",
-  alternates: { canonical: "/contact" },
-};
+  path: "/contact",
+});
 
 const DESKS = [
   { icon: Landmark, dept: "Estimating & Tenders Desk", wing: "Pre-Construction & BOQ Costings", mandate: "Institutional bidding, cost model audits, and RFP evaluations for contractors and developers.", email: "tenders@alifconstruction.pk", hours: "Ext. 201 • 8:30 AM – 6:00 PM PKT" },

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -7,12 +8,12 @@ import {
 import CountUp from "@/components/CountUp";
 import { IMAGES, SITE } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Achievements — A Legacy of Structural Distinction | ALIF Engineering & Construction",
+export const metadata: Metadata = pageMeta({
+  title: "Achievements — A Legacy of Structural Distinction",
   description:
     "ALIF's institutional record: PEC Category CA No-Limit license #00142, triple ISO certification, 1.85M+ safe man-hours, four decades of milestones, the Four HSE Golden Rules and national industry commendations.",
-  alternates: { canonical: "/achievements" },
-};
+  path: "/achievements",
+});
 
 const LICENSES = [
   { tag: "National Statutory", reg: "Reg # 00142", title: "Pakistan Engineering Council (PEC)", sub: "Category CA — No-Limit Financial Scope", text: "Enables ALIF to execute complex civil, structural, mechanical, geotechnical, and high-rise infrastructural works without restriction on capital value or vertical altitude.", chip: "Validity: 2025–2028" },

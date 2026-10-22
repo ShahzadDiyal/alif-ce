@@ -2,42 +2,42 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Building2, MapPin, Search } from "lucide-react";
+import { ArrowRight, ArrowUpRight, BadgeCheck, Building2, MapPin, Search } from "lucide-react";
 import { PORTFOLIO_COUNTS, PROJECT_FILTERS, PROJECTS, type Project } from "@/lib/data";
 
 const REGIONS = ["All Regions", "Lahore", "Karachi", "Islamabad", "Punjab"];
 
 function ArchiveCard({ project }: { project: Project }) {
   return (
-    <article className="card anim-fade-up group flex flex-col overflow-hidden">
+    <article className="anim-fade-up lift group flex flex-col overflow-hidden rounded-card border border-line bg-white">
       <div className="relative">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={project.image} alt={project.title} loading="lazy" className="h-44 md:h-80 w-full object-cover" />
-        <span className={`absolute left-4 top-4 rounded-md px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest ${
-          project.status === "Completed" ? "bg-gold-500 text-pine-950" : "bg-pine-950/85 text-gold-300"
+        <span className={`absolute left-4 top-4 rounded-md px-3 py-1.5 text-[10.5px] font-bold tracking-wider uppercase ${
+          project.status === "Completed" ? "bg-gold text-ink" : "bg-ink/85 text-gold-light backdrop-blur"
         }`}>
           {project.statusLabel}
         </span>
       </div>
       <div className="flex flex-1 flex-col p-5">
-        <p className="flex items-center gap-1.5 text-[12px] font-semibold text-ink-500">
-          <MapPin size={13} className="text-gold-600" /> {project.location}
-        </p>
-        <p className="eyebrow mt-3 !text-[10px] text-gold-600">{project.category}</p>
-        <h3 className="mt-2 font-display text-xl leading-snug text-pine-800">
-          <Link href={`/projects/${project.slug}`} className="hover:text-gold-700">{project.title}</Link>
+        <p className="text-[10.5px] font-bold tracking-[0.16em] text-gold-dark uppercase">{project.category}</p>
+        <h3 className="mt-1.5 font-display text-xl leading-snug text-ink">
+          <Link href={`/projects/${project.slug}`} className="hover:text-gold-dark">{project.title}</Link>
         </h3>
-        <p className="mt-2.5 flex-1 text-[13px] leading-6 text-ink-500">{project.cardText}</p>
-        <dl className="mt-4 space-y-1.5 border-t border-cream-400 pt-3.5">
+        <p className="mt-2 flex items-center gap-1.5 text-[12.5px] font-semibold text-muted">
+          <MapPin className="h-3.5 w-3.5 text-gold-dark" /> {project.location}
+        </p>
+        <p className="mt-3 flex-1 text-[13px] leading-relaxed text-muted">{project.cardText}</p>
+        <dl className="mt-4 space-y-1.5 border-t border-line pt-3.5">
           {project.metrics.map((m) => (
             <div key={m.label} className="flex items-baseline justify-between gap-3 text-[12.5px]">
-              <dt className="text-ink-500">{m.label}:</dt>
-              <dd className="text-right font-bold text-ink-900">{m.value}</dd>
+              <dt className="text-muted">{m.label}:</dt>
+              <dd className="text-right font-bold text-ink">{m.value}</dd>
             </div>
           ))}
         </dl>
-        <Link href={`/projects/${project.slug}`} className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-gold-700 hover:text-gold-600">
-          Technical Data <ArrowRight size={14} />
+        <Link href={`/projects/${project.slug}`} className="mt-4 inline-flex items-center gap-1.5 text-[13px] font-bold text-gold-dark hover:text-ink">
+          Technical Data <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
     </article>
@@ -73,15 +73,16 @@ export default function ProjectsExplorer() {
   return (
     <>
       {/* FILTER BAR */}
-      <section className="border-b border-cream-400 bg-cream-100">
-        <div className="mx-auto w-full px-4 py-5 sm:px-6 lg:px-12">
+      <section id="portfolio" className="scroll-mt-28 border-b border-line bg-cream">
+        <div className="mx-auto w-full px-4 py-6 sm:px-6 lg:px-12">
           <div className="flex flex-wrap items-center gap-2">
+            <span className="mr-1 text-[12px] font-bold tracking-wider text-muted uppercase max-md:mb-1 max-md:w-full">Filter Projects:</span>
             {PROJECT_FILTERS.map((f) => (
               <button
                 key={f.key}
                 onClick={() => setFilter(f.key)}
-                className={`rounded-xl px-3.5 py-2 text-[12px] font-bold tracking-wide transition-colors ${
-                  filter === f.key ? "bg-pine-800 text-gold-300" : "bg-white text-ink-900 border border-cream-400 hover:border-gold-500"
+                className={`rounded-full px-4 py-2 text-[12.5px] font-bold transition max-md:px-3.5 max-md:py-1.5 max-md:text-[12px] ${
+                  filter === f.key ? "bg-gold text-ink" : "border border-line bg-white text-ink hover:border-gold"
                 }`}
               >
                 {f.label} ({counts[f.key] ?? 0})
@@ -90,7 +91,7 @@ export default function ProjectsExplorer() {
           </div>
           <div className="mt-4 flex flex-wrap items-center gap-3">
             <label className="relative min-w-[220px] flex-1 sm:max-w-xs">
-              <Search size={16} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-500" />
+              <Search size={16} className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-muted" />
               <input
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
@@ -102,12 +103,12 @@ export default function ProjectsExplorer() {
             <select value={region} onChange={(e) => setRegion(e.target.value)} className="field !w-auto" aria-label="Region">
               {REGIONS.map((r) => <option key={r}>{r}</option>)}
             </select>
-            <div className="flex overflow-hidden rounded-xl border border-cream-400 bg-white" role="group" aria-label="Status">
+            <div className="flex overflow-hidden rounded-full border border-line bg-white" role="group" aria-label="Status">
               {(["All", "Ongoing", "Completed"] as const).map((s) => (
                 <button
                   key={s}
                   onClick={() => setStatus(s)}
-                  className={`px-4 py-2.5 text-[12.5px] font-bold ${status === s ? "bg-gold-500 text-pine-950" : "text-ink-900 hover:bg-cream-100"}`}
+                  className={`px-4 py-2.5 text-[12.5px] font-bold transition ${status === s ? "bg-gold text-ink" : "text-ink hover:bg-cream"}`}
                 >
                   {s}
                 </button>
@@ -119,53 +120,53 @@ export default function ProjectsExplorer() {
 
       {/* FEATURED */}
       {showFeatured && (
-        <section className="bg-cream-50">
-          <div className="mx-auto w-full px-4 py-14 sm:px-6 lg:px-12">
-            <div className="flex flex-wrap items-end justify-between gap-3">
+        <section className="bg-paper">
+          <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
+            <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
               <div>
-                <p className="eyebrow text-gold-600">Featured Masterpiece</p>
-                <h2 className="mt-2 font-display text-3xl text-pine-800">Flagship High-Rise Engineering</h2>
+                <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Featured Masterpiece</p>
+                <h2 className="mt-3 font-display text-4xl leading-tight text-ink">Flagship High-Rise Engineering</h2>
               </div>
-              <span className="rounded-lg bg-gold-500/15 px-3 py-1.5 text-[11px] font-bold uppercase tracking-widest text-gold-700">
-                PEC No-Limit CA Classified
-              </span>
+              <p className="flex items-center gap-1.5 text-[12px] font-semibold text-gold-dark lg:justify-self-end">
+                <BadgeCheck className="h-4 w-4" /> PEC No-Limit CA Classified
+              </p>
             </div>
-            <article className="card anim-fade-up mt-8 overflow-hidden lg:grid lg:grid-cols-2">
+            <article className="anim-fade-up mt-10 overflow-hidden rounded-card border border-line bg-white lg:grid lg:grid-cols-2">
               <div className="relative min-h-[280px]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={featured.image} alt={featured.title} className="absolute inset-0 h-full w-full object-cover" />
-                <span className="absolute left-4 top-4 rounded-md bg-pine-950/85 px-2.5 py-1 text-[10px] font-bold uppercase tracking-widest text-gold-300">
+                <span className="absolute left-4 top-4 rounded-md bg-ink/85 px-3 py-1.5 text-[10.5px] font-bold tracking-wider text-gold-light uppercase backdrop-blur">
                   PEC No-Limit CA Classified
                 </span>
               </div>
-              <div className="p-6 sm:p-8">
-                <p className="flex items-center gap-1.5 text-[13px] font-semibold text-ink-500">
-                  <MapPin size={14} className="text-gold-600" /> {featured.location}
+              <div className="p-7 max-sm:p-5 sm:p-9">
+                <p className="text-[11px] font-bold tracking-[0.2em] text-gold-dark uppercase">{featured.category} • {featured.statusLabel}</p>
+                <h3 className="mt-2.5 font-display text-[28px] leading-tight text-ink max-sm:text-[23px]">{featured.title}</h3>
+                <p className="mt-2 flex items-center gap-1.5 text-[13px] font-semibold text-muted">
+                  <MapPin className="h-3.5 w-3.5 text-gold-dark" /> {featured.location}
                 </p>
-                <p className="eyebrow mt-4 !text-[10px] text-gold-600">{featured.category} · {featured.statusLabel}</p>
-                <h3 className="mt-2 font-display text-3xl leading-tight text-pine-800">{featured.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-ink-500">{featured.cardText}</p>
-                <dl className="mt-5 grid gap-4 border-t border-cream-400 pt-5 sm:grid-cols-2">
+                <p className="mt-3 text-[14px] leading-relaxed text-muted">{featured.cardText}</p>
+                <dl className="mt-5 grid gap-4 border-t border-line pt-5 sm:grid-cols-2">
                   {featured.metrics.map((m) => (
                     <div key={m.label}>
-                      <dt className="text-[11px] font-bold uppercase tracking-widest text-ink-500">{m.label}</dt>
-                      <dd className="mt-1 font-display text-xl text-pine-800">{m.value}</dd>
+                      <dt className="text-[10.5px] font-bold tracking-wider text-muted uppercase">{m.label}</dt>
+                      <dd className="mt-1 font-display text-xl text-ink">{m.value}</dd>
                     </div>
                   ))}
                   <div className="sm:col-span-2">
-                    <dt className="text-[11px] font-bold uppercase tracking-widest text-ink-500">Scope of Work</dt>
-                    <dd className="mt-1 text-sm font-semibold text-ink-900">{featured.scope}</dd>
+                    <dt className="text-[10.5px] font-bold tracking-wider text-muted uppercase">Scope of Work</dt>
+                    <dd className="mt-1 text-[13.5px] font-semibold text-ink">{featured.scope}</dd>
                   </div>
                 </dl>
-                <p className="mt-5 flex gap-2.5 rounded-xl bg-cream-100 p-4 text-[13px] leading-6 text-ink-900">
-                  <Building2 size={18} className="mt-0.5 shrink-0 text-gold-600" />
+                <p className="mt-5 flex gap-2.5 rounded-card bg-cream p-4 text-[13px] leading-relaxed text-ink/85">
+                  <Building2 className="mt-0.5 h-[18px] w-[18px] shrink-0 text-gold-dark" />
                   <span><strong>Engineering Feat:</strong> Rigorous deep raft foundation with 3 basements executed in a high-water-table zone using secant pile cut-off walls and post-tensioned beam slabs.</span>
                 </p>
-                <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
-                  <Link href={`/projects/${featured.slug}`} className="btn-gold">
-                    View Technical Case Study <ArrowUpRight size={16} />
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-3 max-md:flex-col max-md:items-stretch">
+                  <Link href={`/projects/${featured.slug}`} className="inline-flex items-center gap-2 rounded-btn bg-ink px-5 py-3 text-[13px] font-bold text-white hover:bg-pine max-md:w-full max-md:justify-center">
+                    View Technical Case Study <ArrowUpRight className="h-4 w-4" />
                   </Link>
-                  <span className="text-[12px] font-bold tracking-widest text-ink-500">ID: {featured.id}</span>
+                  <span className="text-[11.5px] font-bold tracking-wide text-gold-dark uppercase">ID: {featured.id}</span>
                 </div>
               </div>
             </article>
@@ -174,27 +175,27 @@ export default function ProjectsExplorer() {
       )}
 
       {/* ARCHIVE */}
-      <section className="bg-cream-200/50">
-        <div className="mx-auto w-full px-4 py-14 sm:px-6 lg:px-12">
-          <div className="flex flex-wrap items-end justify-between gap-3">
+      <section className="bg-cream">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-12 py-24">
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-end">
             <div>
-              <p className="eyebrow text-gold-600">Portfolio Archive</p>
-              <h2 className="mt-2 font-display text-3xl text-pine-800">Major Executed Works</h2>
+              <p className="text-[11px] font-bold tracking-[0.22em] text-gold-dark uppercase">Portfolio Archive</p>
+              <h2 className="mt-3 font-display text-4xl leading-tight text-ink">Major Executed Works</h2>
             </div>
-            <p className="max-w-md text-[13px] leading-6 text-ink-500">
+            <p className="text-[14.5px] leading-relaxed text-muted lg:justify-self-end lg:max-w-md">
               Structured execution under PEC Category CA (No-Limit) licensing across high-density urban centres and strategic industrial zones.
             </p>
           </div>
           {archive.length > 0 ? (
-            <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {archive.map((p) => <ArchiveCard key={p.slug} project={p} />)}
             </div>
           ) : (
-            <p className="card mt-9 p-8 text-center text-sm text-ink-500">
+            <p className="mt-10 rounded-card border border-line bg-white p-8 text-center text-sm text-muted">
               No projects match the current filters. Clear the search or choose another sector.
             </p>
           )}
-          <p className="mt-8 text-[13px] font-semibold text-ink-500">
+          <p className="mt-8 text-[12px] font-bold tracking-wider text-muted uppercase">
             Showing {filtered.length > 0 ? 1 : 0} to {filtered.length} of {PORTFOLIO_COUNTS.total} National Contracts
           </p>
         </div>

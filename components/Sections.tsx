@@ -116,3 +116,16 @@ export function CtaBand() {
     </section>
   );
 }
+
+/** Section heading in the site's shared style (same markup as About/Services/Sectors/Contact). */
+export function SiteHeading({
+  eyebrow, title, text, dark = false, center = false, className = "",
+}: { eyebrow: string; title: string; text?: string; dark?: boolean; center?: boolean; className?: string }) {
+  return (
+    <div className={`reveal ${center ? "mx-auto max-w-2xl text-center" : "max-w-2xl"} ${className}`}>
+      <p className={`text-[11px] font-bold tracking-[0.22em] uppercase ${dark ? "text-gold-light" : "text-gold-dark"}`}>{eyebrow}</p>
+      <h2 className={`mt-3 font-display text-4xl leading-tight ${dark ? "text-white" : "text-ink"}`}>{title}</h2>
+      {text && <p className={`mt-3 text-[14.5px] leading-relaxed ${dark ? "text-mist" : "text-muted"}`}>{text}</p>}
+    </div>
+  );
+}

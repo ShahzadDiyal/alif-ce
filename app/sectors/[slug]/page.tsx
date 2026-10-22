@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -16,11 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const s = SECTORS.find((x) => x.slug === slug);
   if (!s) return {};
-  return {
-    title: `${s.title} Contracting | ALIF Engineering & Construction`,
+  return pageMeta({
+    title: `${s.title} Contracting`,
     description: s.description,
-    alternates: { canonical: `/sectors/${s.slug}` },
-  };
+    path: `/sectors/${s.slug}`,
+    images: [s.image],
+  });
 }
 
 const STANDARDS = [

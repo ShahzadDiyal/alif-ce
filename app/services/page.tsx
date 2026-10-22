@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -6,12 +7,12 @@ import {
 } from "lucide-react";
 import { IMAGES, SERVICES, SITE } from "@/lib/data";
 
-export const metadata: Metadata = {
-  title: "Services — Six Tectonic Service Pillars | ALIF Engineering & Construction",
+export const metadata: Metadata = pageMeta({
+  title: "Services — Six Tectonic Service Pillars",
   description:
     "Comprehensive engineering capabilities from ground zero to turnkey handover: Turnkey EPC, geotechnical & deep foundations, superstructures & high-rise, façades, integrated MEP and industrial infrastructure.",
-  alternates: { canonical: "/services" },
-};
+  path: "/services",
+});
 
 const CHIPS = ["EPC Turnkey", "Deep Foundations", "Post-Tensioned Superstructures", "High-Spec MEP", "Industrial PEB", "Fast-Track Fitout"];
 

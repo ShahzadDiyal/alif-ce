@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -8,12 +9,12 @@ import {
 import { IMAGES, SITE } from "@/lib/data";
 import CountUp from "@/components/CountUp";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
   title: "About ALIF — Shaping the Architectural Destiny of Pakistan",
   description:
     "Founded on uncompromised structural integrity, ALIF Engineering & Construction has evolved from a pioneering geotechnical specialist into one of Pakistan's preeminent No-Limit Category CA turnkey contractors.",
-  alternates: { canonical: "/about" },
-};
+  path: "/about",
+});
 
 const HERITAGE = [
   { value: "38+", label: "Years of Pedigree", text: "Continuous mega-structural execution across all federated provinces since 1987." },
